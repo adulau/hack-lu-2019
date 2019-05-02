@@ -1,0 +1,72 @@
+---
+layout: splash
+---
+
+<div class="initial-content">
+   {{ content }}
+</div>
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent News" }}</h3>
+
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %}
+
+
+<div>
+  <span style="width:40%; display:inline-block;">
+    <h3 class="archive__subtitle">Organized by</h3>
+    <a href="https://www.circl.lu/"><img src="{{ site.url }}/images/logos/circl.png" /></a>
+  </span>
+  <span style="width:40%; display:inline-block;">
+    <h3 class="archive__subtitle">Speakers dinner sponsored by </h3>
+    <a href="https://www.bluefrostsecurity.de/en/"><img src="{{ site.url }}/images/logos/bluefrostsecurity.png" /></a>
+  </span>
+</div>
+
+<div>
+  <span style="width:40%; display:inline-block;">
+    <h3 class="archive__subtitle">Sponsored by</h3>
+    <a href="https://www.sans.org/emea"><img src="{{ site.url }}/images/logos/sans-emea.png" /></a>
+    <a href="https://hacknowledge.com/"><img src="{{ site.url }}/images/logos/hacknowledge.png" /></a>
+    <a href="https://www.doclerholding.com/en/main/"><img src="{{ site.url }}/images/logos/docler.jpg" /></a>
+    <a href="https://www2.deloitte.com/lu/en.html"><img src="{{ site.url }}/images/logos/deloitte.png" /></a>
+    <a href="https://www.creditmutuel.fr/"><img src="{{ site.url }}/images/logos/cm.png" /></a>
+    <a href="https://www.govcert.lu"><img src="{{ site.url }}/images/logos/govcert.png" /></a>
+    <a href="https://www.itrust.lu"><img src="{{ site.url }}/images/logos/itrust.png" /></a>
+    </span>
+    <span style="width:40%; display:inline-block;">
+    </span>
+  </div>
+
+<h3 class="archive__subtitle">Diversity scholarship support by</h3>
+
+<a href="https://www.ernw.de"><img src="{{ site.url }}/images/logos/ernw.png" /></a>
+<a href="https://www.google.com"><img src="{{ site.url }}/images/logos/google.png" /></a>
+<a href="https://www.dcso.de"><img src="{{ site.url }}/images/logos/dcso-logo.svg" /></a>
+<a href="https://www.gdata-advancedanalytics.de/"><img src="{{ site.url }}/images/logos/gdata-adan.png" /></a>
+<a href="https://www.govcert.lu"><img src="{{ site.url }}/images/logos/govcert.png" /></a>
+
+<h3 class="archive__subtitle">Media sponsor support by</h3>
+
+<a href="http://www.miscmag.com/"><img src="{{ site.url }}/images/logos/misc.png" /></a><br />
+
+<h3 class="archive__subtitle">Supporter ticket by</h3>
+
+<a href="https://www.imrim.lu/"><img src="{{ site.url }}/images/logos/imrim.png" /></a>
+
+<h3 class="archive__subtitle">CTF sponsoring by</h3>
+
+<a href="https://www.telindus.lu/"><img src="{{ site.url }}/images/logos/telindus.png" /></a>
+
+<h3 class="archive__subtitle">Internet provided by </h3>
+<a href="http://www.post.lu/"><img src="{{ site.url }}/images/logos/post.png" /></a><br />
+<a href="http://www.conostix.com/"><img src="{{ site.url }}/images/logos/conostix.png" /></a> <img src="{{ site.url }}/images/logos/Kappa_Data.png" /> <img src="{{ site.url }}/images/logos/ruckus-standard-logo.png" />
+
+<h3 class="archive__subtitle">Hosting provided by</h3>
+<a href="http://www.maehdros.com/"><img src="{{ site.url }}/images/logos/maehdros.png" /></a>
+
+<h3 class="archive__subtitle">Hardware schredder by</h3>
+<a href="https://www.streff.lu/"><img src="{{ site.url }}/images/logos/streff_DPS.png" /></a>

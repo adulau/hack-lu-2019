@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-01T17:46:49+02:00</updated><id>http://localhost:4000/</id><title type="html">hack.lu 2019</title><subtitle>Hack.lu is an open convention/conference where people can discuss about computer security, privacy, information technology and its cultural/technical implication on society. It's the 14th edition (22-24 October 2019) of hack.lu in Luxembourg.</subtitle><author><name>hack.lu</name></author><entry><title type="html">Talks and agenda are now online for hack.lu 2018</title><link href="http://localhost:4000/blog/talks-announced/" rel="alternate" type="text/html" title="Talks and agenda are now online for hack.lu 2018" /><published>2018-09-04T07:39:55+02:00</published><updated>2018-09-04T07:39:55+02:00</updated><id>http://localhost:4000/blog/talks-announced</id><content type="html" xml:base="http://localhost:4000/blog/talks-announced/">&lt;h1 id=&quot;talks-and-agenda-are-now-online-for-hacklu-2018&quot;&gt;Talks and agenda are now online for hack.lu 2018&lt;/h1&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Any security technology whose effectiveness can't be empirically determined is indistinguishable from blind luck&lt;/code&gt; &lt;strong&gt;Dan Geer&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/agenda/&quot;&gt;Agenda&lt;/a&gt; and &lt;a href=&quot;/talks/&quot;&gt;talks&lt;/a&gt; are now published for hack.lu 2018. Thanks to all the people who submitted a talk or workshop
+proposal to hack.lu 2018 and also a big thank to the program committee for the reviews and insightful discussion.
+The quality of the submissions were extremely high but the agenda is a finite space. So we have an interesting mix of talks and workshops
+to cover a large set of topics and interests in information security. Don’t forget &lt;a href=&quot;/info/&quot;&gt;to register for the conference&lt;/a&gt;. See you there!&lt;/p&gt;</content><author><name>hack.lu</name></author><summary type="html">Talks and agenda are now online for hack.lu 2018</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/%7B%22feature%22=%3Enil%7D" /></entry><entry><title type="html">Call for papers is now open for hack.lu 2018</title><link href="http://localhost:4000/blog/hack.lu-2018-call-for-papers/" rel="alternate" type="text/html" title="Call for papers is now open for hack.lu 2018" /><published>2018-05-01T21:39:55+02:00</published><updated>2018-05-01T21:39:55+02:00</updated><id>http://localhost:4000/blog/hack.lu-2018-call-for-papers</id><content type="html" xml:base="http://localhost:4000/blog/hack.lu-2018-call-for-papers/">&lt;h1 id=&quot;hacklu-2018-call-for-papers-presentations-and-workshops&quot;&gt;Hack.lu 2018 Call for Papers, Presentations and Workshops&lt;/h1&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Any security technology whose effectiveness can't be empirically determined is indistinguishable from blind luck&lt;/code&gt; &lt;strong&gt;Dan Geer&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The purpose  of the  hack.lu convention  is to give  an open  and free
+playground   where  people   can  discuss   the  implication   of  new
+technologies in  society.  hack.lu is a balanced  mix convention where
+technical  and non-technical  people can  meet each  others  and share
+freely all  kind of information.  The  convention will be  held in the
+Grand-Duchy of  Luxembourg in October (16-18.10.2018).  The most
+significant  new  discoveries   about  computer  network  attacks  and
+defenses,  commercial  security solutions,  and  pragmatic real  world
+security  experience will  be  presented  in a  three  days series  of
+informative tutorials.   We would like to announce  the opportunity to
+submit papers,  and/or lightning talk  proposals for selection  by the
+hack.lu  technical  review  committee.  This  year we  will  be  doing
+workshops on the first day PM and talks of 1 hour  or  30 minutes  in
+the main track for the three days.&lt;/p&gt;
+
+&lt;h2 id=&quot;scope&quot;&gt;Scope&lt;/h2&gt;
+
+&lt;p&gt;Topics of interest include, but are not limited to :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Software Engineering and Security&lt;/li&gt;
+  &lt;li&gt;Social Engineering&lt;/li&gt;
+  &lt;li&gt;Honeypots/Honeynets&lt;/li&gt;
+  &lt;li&gt;Spyware, Phishing and Botnets (Distributed attacks)&lt;/li&gt;
+  &lt;li&gt;Newly discovered vulnerabilities in software and hardware&lt;/li&gt;
+  &lt;li&gt;Electronic/Digital Privacy&lt;/li&gt;
+  &lt;li&gt;Wireless Network and Security&lt;/li&gt;
+  &lt;li&gt;Attacks on Information Systems and/or Digital Information Storage&lt;/li&gt;
+  &lt;li&gt;Electronic Voting&lt;/li&gt;
+  &lt;li&gt;Free Software and Security&lt;/li&gt;
+  &lt;li&gt;Assessment of Computer, Electronic Devices and Information Systems&lt;/li&gt;
+  &lt;li&gt;Standards for Information Security&lt;/li&gt;
+  &lt;li&gt;Legal and Social Aspect of Information Security&lt;/li&gt;
+  &lt;li&gt;Software Engineering and Security&lt;/li&gt;
+  &lt;li&gt;Security in Information Retrieval&lt;/li&gt;
+  &lt;li&gt;Network Security&lt;/li&gt;
+  &lt;li&gt;Malware Analysis and Reversing&lt;/li&gt;
+  &lt;li&gt;Forensics and Anti-Forensics&lt;/li&gt;
+  &lt;li&gt;Offensive (and counter-offensive) Information Technology&lt;/li&gt;
+  &lt;li&gt;Mobile Communications Security and Vulnerabilities&lt;/li&gt;
+  &lt;li&gt;CSIRTs, Incident Analysis and Response&lt;/li&gt;
+  &lt;li&gt;Information Security and Data Mining&lt;/li&gt;
+  &lt;li&gt;Threats Exchange and Sharing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;deadlines&quot;&gt;Deadlines&lt;/h2&gt;
+
+&lt;p&gt;The following  dates are important if  you want to  participate in the
+call for papers.&lt;/p&gt;
+
+&lt;p&gt;Full paper submission : no later than 10th June 2018&lt;/p&gt;
+
+&lt;p&gt;Notification date : 18th August 2018&lt;/p&gt;
+
+&lt;h2 id=&quot;speakers-privileges&quot;&gt;Speakers’ Privileges&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;One speaker per talk/workshop&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Accommodation will be provided (4 nights during the conference)&lt;/li&gt;
+  &lt;li&gt;Travel expenses will be covered up to a max amount agreed in advance&lt;/li&gt;
+  &lt;li&gt;Conference speakers dinner&lt;/li&gt;
+  &lt;li&gt;Access to the hack.lu 2018 conference&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note: Let us know if you have questions regarding accommodations and travel expenses.&lt;/p&gt;
+
+&lt;h2 id=&quot;publication-and-rights&quot;&gt;Publication and rights&lt;/h2&gt;
+
+&lt;p&gt;Authors keep the  full rights on their publication/papers  but give an
+unrestricted  right  to  redistribute  their papers  for  the  hack.lu
+convention and its related electronic/paper publication.&lt;/p&gt;
+
+&lt;h2 id=&quot;sponsoring&quot;&gt;Sponsoring&lt;/h2&gt;
+
+&lt;p&gt;If  you  want  to  support  the  initiative  and  gain  visibility  by
+sponsoring, please contact us by writing an e-mail to info(AT)hack.lu&lt;/p&gt;
+
+&lt;h2 id=&quot;cfp-website&quot;&gt;CfP Website&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cfp.hack.lu/&quot;&gt;CfP hack.lu 2018 submission website&lt;/a&gt;&lt;/p&gt;</content><author><name>hack.lu</name></author><summary type="html">Hack.lu 2018 Call for Papers, Presentations and Workshops</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/%7B%22feature%22=%3Enil%7D" /></entry></feed>
