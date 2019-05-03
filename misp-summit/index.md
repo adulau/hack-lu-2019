@@ -35,7 +35,7 @@ The MISP Summit will take place from 10:00 to 17:00, Monday 21th October 2018.
 
 {: class="table"}
 
-[Call For Papers for the MISP threat intelligence submit](https://cfp.hack.lu/misp0x5/) is closed and we welcomed all contributions to gather use cases, best practices, new developments, creative approaches in threat intelligence and especially users of the MISP platform.
+[Call For Papers for the MISP threat intelligence submit](https://cfp.hack.lu/tsc19/cfp) is closed and we welcomed all contributions to gather use cases, best practices, new developments, creative approaches in threat intelligence and especially users of the MISP platform.
 
 
 Talks
