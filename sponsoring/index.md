@@ -1,12 +1,12 @@
 ---
 layout: splash
-title: Sponsoring hack.lu 2018
-excerpt: "Sponsoring hack.lu 2018"
-modified: 2018-05-09T19:44:38.564948-04:00
+title: Sponsoring hack.lu 2019
+excerpt: "Sponsoring hack.lu 2019"
+modified: 2019-05-01T19:44:38.564948-04:00
 ---
 
 
-Sponsoring hack.lu 2018
+Sponsoring hack.lu 2019
 -----------------------
 
 All the prices are valid for invoices **paid before the 1st of July**. If it is a problem, let us know.
@@ -22,16 +22,16 @@ Packages
 Diversity Scholarship Sponsor
 -----------------------------
 
-This year, there will be a [blackhoodie](https://www.blackhoodie.re/) workshop on Monday before hack.lu, and we would like to allow the attendees of the workshop to also attend the main conference. As most of them don't get support from their organisation to cover the conference fees, and the hotel cost.
-Hack.lu offers tickets at a reduced price and would like to ask for some help in order to also cover the hotel costs. 
+This year, there will be a [blackhoodie](https://www.blackhoodie.re/) workshop on Saturday, Sunday and Monday before hack.lu, and we would like to allow the attendees of the workshop to also attend the main conference. As most of them don't get support from their organisation to cover the conference fees, and the hotel cost.
+Hack.lu offers tickets at a reduced price and would like to ask for some help in order to also cover the hotel costs.
 The options below are just examples, please get in touch if you have other ideas.
 
-- 700€: 1 diversity scholarship ticket
-- 1000€: 1 diversity scholarship ticket, small mention/logo on the website
-- 4000€: 5 standard tickets, 2 diversity scholarship tickets, logo in the diversity section on the website
-- 6000€: 2 standard ticket, 5 diversity scholarship tickets, large logo in the diversity section on the website
-- 10000€: 3 standard tickets, 5 diversity scholarship tickets, big logo on printed matters and website, small stand in the hallway.
-- 15000€: 3 standard tickets, 5 diversity scholarship tickets, big logo on printed matters and website, stand in the hallway.
+- 1000€: 1 diversity scholarship ticket (gift)
+- 1500€: 1 diversity scholarship ticket, small mention/logo on the website
+- 5000€: 5 standard tickets, 2 diversity scholarship tickets, logo in the diversity section on the website
+- 7000€: 2 standard ticket, 5 diversity scholarship tickets, large logo in the diversity section on the website
+- 11000€: 3 standard tickets, 5 diversity scholarship tickets, big logo on printed matters and website, small stand in the hallway.
+- 16000€: 3 standard tickets, 5 diversity scholarship tickets, big logo on printed matters and website, stand in the hallway.
 
 Contact
 =======
