@@ -13,7 +13,7 @@ MISP Summit 05
 
 ![MISP logo](https://raw.githubusercontent.com/MISP/MISP/2.4/INSTALL/logos/misp-logo.png)
 
-On Monday 21th October 2018 from 10:00 to 17:00 (the day before hack.lu), the 5th [MISP(Malware Information Sharing Platform & Threat Sharing
+On Monday 21th October 2019 from 10:00 to 17:00 (the day before hack.lu), the 5th [MISP(Malware Information Sharing Platform & Threat Sharing
 ) threat intelligence](http://www.misp-project.org/) summit will take place.
 
 
@@ -26,7 +26,7 @@ The objective of the summit is openly discuss about the current usage of MISP, t
 Agenda
 ------
 
-The MISP Summit will take place from 10:00 to 17:00, Monday 21th October 2018.
+The MISP Summit will take place from 10:00 to 17:00, Monday 21th October 2019.
 
 {: class="table table-striped"}
 
