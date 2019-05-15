@@ -24,7 +24,7 @@ modified: 2018-05-25T19:44:38.564948-04:00
 
 The conference will be held as every year in Luxembourg, a small country between France, Belgium and Germany. The conference venue is the Parc Hotel in Luxembourg-Dommeldange, like in the previous years.
 
-We've negotiated a special rate with the hotel the conference takes place. You can benefit from the special rate if you reserve your room through [Parc Hotel's registration form](https://reservations.cubilis.eu/alvisse-parc-hotel-luxembourg) and mentioning the promotional code 'hacklu19'. Please make sure to register your hotel room before September 1st, 2018 in order to be able to benefit from the proposal.
+We've negotiated a special rate with the hotel the conference takes place. You can benefit from the special rate if you reserve your room through [Parc Hotel's registration form](https://reservations.cubilis.eu/alvisse-parc-hotel-luxembourg) and mentioning the promotional code 'hacklu19'. Please make sure to register your hotel room before September 1st, 2019 in order to be able to benefit from the proposal.
 
 ### Address of the Venue
 
