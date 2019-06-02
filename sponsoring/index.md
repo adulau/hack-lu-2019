@@ -2,7 +2,7 @@
 layout: splash
 title: Sponsoring hack.lu 2019
 excerpt: "Sponsoring hack.lu 2019"
-modified: 2019-05-01T19:44:38.564948-04:00
+modified: 2019-06-01T19:44:38.564948-04:00
 ---
 
 
@@ -11,13 +11,18 @@ Sponsoring hack.lu 2019
 
 All the prices are valid for invoices **paid before the 1st of July**. If it is a problem, let us know.
 
-Packages
-========
+Hack.lu Packages
+================
 
-- Platinum Sponsor is 10000 Euro or more. This incorporates big logos on printed matters and the [website](https://hack.lu), 5 free entrances to the conference, stand in the hallway.
-- Gold Sponsor is 5000 Euro. Medium logo on printed matters and the website.  3 free entrances are included and small stand in the hallway.
-- Silver Sponsor is 3000 Euro. Medium logo on the website. 1 free entrance.
+- Ebony Sponsor is 25000 Euro which includes [Cybersecurity week](https://cybersecurityweek.lu/sponsor/) and hack.lu sponsoring together.
+- Falun Sponsor is 7500 Euro or more. This incorporates big logos on printed matters and the [website](https://hack.lu), 5 free entrances to the conference, stand in the hallway.
+- Cardinal Sponsor is 5000 Euro. Medium logo on printed matters and the website.  3 free entrances are included and small stand in the hallway.
+- Scarlet Sponsor is 2500 Euro. Medium logo on the website. 1 free entrance.
 - Social Event Sponsor is 10000 Euro. The event will be in the evening of the first day. It includes the same perks as the Platinum package.
+
+You can also sponsor the cybersecurityweek (14-25 October 2019) which also takes place during and before hack.lu 2019.
+
+![](https://cybersecurityweek.lu/assets/img/pour_siteweb_tableau-sponsor-2019-resized.png)
 
 Diversity Scholarship Sponsor
 -----------------------------
@@ -37,5 +42,6 @@ Contact
 =======
 
 Contact us at info(AT)hack(DOT)lu if you want to sponsor [hack.lu](https://hack.lu)
+
 We are open to any specific partnership proposals as well. Do not hesitate to get in touch for any inquiries.
 
