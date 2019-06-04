@@ -18,7 +18,7 @@ Hack.lu Packages
 - Falun Sponsor is 7500 Euro or more. This incorporates big logos on printed matters and the [website](https://hack.lu), 5 free entrances to the conference, stand in the hallway.
 - Cardinal Sponsor is 5000 Euro. Medium logo on printed matters and the website.  3 free entrances are included and small stand in the hallway.
 - Scarlet Sponsor is 2500 Euro. Medium logo on the website. 1 free entrance.
-- Social Event Sponsor is 10000 Euro. The event will be in the evening of the first day. It includes the same perks as the Platinum package.
+- Social Event Sponsor is 10000 Euro. The event will be in the evening of the first day. It includes the same perks as the Falun package, but with specific visibility during the well-visited social event.
 
 You can also sponsor the cybersecurityweek (14-25 October 2019) which also takes place during and before hack.lu 2019.
 
