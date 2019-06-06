@@ -48,6 +48,11 @@ Everyone interested (developers, contributors, users and future users) in the MI
 
 The access to the MISP Summit is free.
 
+Registration
+--
+
+{% include registration-summit.html %}
+
 Sponsors
 --------
 
