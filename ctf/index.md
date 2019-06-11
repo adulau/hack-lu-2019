@@ -4,16 +4,16 @@ classes:
   - splash
   - dark-theme
 title:  Capture The Flag
-excerpt: "Capture The Flag by FluxFingers during Hack.lu 2018"
-modified: 2018-04-18T19:44:38.564948-04:00
+excerpt: "Capture The Flag by FluxFingers during Hack.lu 2019"
+modified: 2019-06-11T19:44:38.564948-04:00
 header:
   overlay_image: /images/flux.jpg
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
   caption: "Photo credit: [**adulau**](https://www.flickr.com/photos/adulau)"
 ---
 
-The 2018's CTF will at hack.lu again be held by [FluxFingers](https://www.fluxfingers.net/), the CTF Team of
-Ruhr-Universität Bochum (Germany). This will be the eighth hack.lu CTF held by the FluxFingers.
+The 2019's CTF will at hack.lu again be held by [FluxFingers](https://www.fluxfingers.net/), the CTF Team of
+Ruhr-Universität Bochum (Germany). This will be the ninth hack.lu CTF held by the FluxFingers.
 
 ![FluxFingers logo](https://fluxfingers.net/static/img/logo_white.png)
 
@@ -27,15 +27,15 @@ For updates concerning the CTF follow us [@fluxfingers](https://twitter.com/flux
 
 The CTF will take place during the hack.lu conference and will last 48h hours like in the previous years.
 
-* Tue, Oct. 16, 10:00 — Thu, Oct. 18, 10:00 UTC
+* Tue, Oct. 22, 10:00 — Thu, Oct. 24, 10:00 UTC
 
 # Topic
 
-> Arcade
+> FluxFingers for Future
 
 # CTF Registration
 
-Registration will open on Tue, Oct. 9 at [the ctf page](https://arcade.fluxfingers.net)! 
+Registration will open on Tue, Oct. 15 (link TBA)! 
 
 # What
 
