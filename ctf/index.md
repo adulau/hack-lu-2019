@@ -13,7 +13,7 @@ header:
 ---
 
 The 2019's CTF will at hack.lu again be held by [FluxFingers](https://www.fluxfingers.net/), the CTF Team of
-Ruhr-Universität Bochum (Germany). This will be the ninth hack.lu CTF held by the FluxFingers.
+Ruhr-Universität Bochum (Germany). This will be the tenth hack.lu CTF held by the FluxFingers.
 
 ![FluxFingers logo](https://fluxfingers.net/static/img/logo_white.png)
 
