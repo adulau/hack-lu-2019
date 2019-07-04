@@ -1,10 +1,10 @@
 ---
 layout: splash
-title: Call for Failure (CfF 0x0) - Over Fail: the untold truth behind the magic of cybersecurity
-excerpt: "10-minute talks during hack.lu to present (the/your) biggest failure in cybersecurity you’ve ever experienced and what have you learned from it."
+title: Call for Failure (CfF 0x0) - Over Fail the untold truth behind the magic of cybersecurity
+excerpt: "10-minute talks during hack.lu to present (the/your) biggest failure in cybersecurity you’ve ever experienced and what have you learned from it"
 modified: 2019-07-03T19:44:38.564948-04:00
 header:
-  overlay_image: /images/cff.png
+  overlay_image: /images/cff.jpg
   overlay_filter: 0.4 # same as adding an opacity of 0.5 to a black background
 ---
 
@@ -33,7 +33,9 @@ Did you get flagged by the blue team for a dumb mistake during a red team engage
 
 Do you have a Simion story to share with the other hack.lu attendees in ten minutes or less? Then submit to our call for failure and help us dispel the magical and BS side of cybersecurity! The human knowledge has been built on regular failures. So be proud and share your failures in a 10-minutes session which will take place during hack.lu.
 
-## Registration Link
+## Registration Link to submit your talk
+
+- [https://cfp.hack.lu/cff0x0/cfp](https://cfp.hack.lu/cff0x0/cfp)
 
 ## Location
 
