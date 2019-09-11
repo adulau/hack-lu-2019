@@ -38,6 +38,8 @@ The options below are just examples, please get in touch if you have other ideas
 - 11000€: 3 standard tickets, 5 diversity scholarship tickets, big logo on printed matters and website, small stand in the hallway.
 - 16000€: 3 standard tickets, 5 diversity scholarship tickets, big logo on printed matters and website, stand in the hallway.
 
+All sponsoring prices mentioned are excluding VAT.
+
 Contact
 =======
 
