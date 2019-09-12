@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8
 
-import json
 from urllib.parse import quote_plus
 
-# Get talks from here: https://cfp.hack.lu/api/events/hacklu18/talks/?limit=100
-# TODO: automate that.
+from pypretalx import PyPretalx
+from keys import username, password
 
-with open('talks.json') as f:
-    talks = json.load(f)
 
+url = 'https://cfp.hack.lu'
+
+p = PyPretalx(url=url, username=username, password=password)
+
+talks = p.talks('hacklu19', limit=100)
 
 all_keynotes = '''# Keynotes
 '''
@@ -42,11 +44,17 @@ for talk in talks['results']:
     md_talk = talk_template.format(escaped_title=quote_plus(talk['title']),
                                    title=talk['title'],
                                    speaker=', '.join([speaker['name'] for speaker in talk['speakers']]),
-                                   abstract=talk['abstract'])
-    for speaker in talk['speakers']:
+                                   abstract=talk['abstract'].replace('\r', ''))
+    for s in talk['speakers']:
+        speaker = p.speakers('hacklu19', s['code'])
+        bio = speaker['biography']
+        if bio:
+            bio = bio.replace('\r', '')
+        else:
+            bio = ''
         md_talk += speaker_template.format(speaker=speaker['name'],
                                            escaped_speaker=quote_plus(speaker['name']),
-                                           bio=speaker['biography'])
+                                           bio=bio)
 
     if talk['submission_type']['en'] in ['Short talk', 'Talk']:
         all_talks += md_talk
@@ -58,7 +66,7 @@ for talk in talks['results']:
 headers = '''---
 layout: splash
 title:  Talks
-excerpt: "Talks - Hack.lu 2018"
+excerpt: "Talks - Hack.lu 2019"
 ---
 
 '''
