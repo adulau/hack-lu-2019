@@ -521,6 +521,18 @@ Faup is an opensource tool which allows to work with URLs. Mainly parsing, but a
 Lead developer of Faup and other opensource tools.
 
 
+## <a name="Open+the+safe+and+get+cured."></a>Open the safe and get cured.
+by Stijn Tomme
+
+Open the safe and get cured.
+From manufacturing your network cable to determining the code… and getting the anti-virus
+
+
+### Bio: <a name="Stijn+Tomme"></a>Stijn Tomme
+
+40 years old, been messing around in IT security for about 15 years.
+
+
 ## <a name="Introduction+to+Osquery"></a>Introduction to Osquery
 by David Szili
 
@@ -561,6 +573,17 @@ Didier Stevens (Microsoft MVP Consumer Security, SANS ISC Handler, Wireshark Cer
 
 
 You can find his open source security tools on his IT security related blog http://blog.DidierStevens.com
+
+
+## <a name="Sigma+Workshop"></a>Sigma Workshop
+by Thomas Patzke
+
+How to create Sigma rules and hunt evil in logs.
+
+
+### Bio: <a name="Thomas+Patzke"></a>Thomas Patzke
+
+Thomas Patzke has more than 13 years of experience in the area of information security, currently works as blue teamer and threat hunter at thyssenkrupp CERT and still owns no certification. He likes to [create and contribute to open source security tools](https://github.com/thomaspatzke) and is one of the creators of [Sigma](https://github.com/Neo23x0/sigma).
 
 
 ## <a name="Java+Web+Application+Secure+Coding+Workshop"></a>Java Web Application Secure Coding Workshop
@@ -670,6 +693,18 @@ So come join us for three hours of **practical** incident response where **autom
 With more than 20 years of experience in operational cybersecurity, Saâd is the head of CERT-EU and the leader of TheHive Project. He devoted the last eleven years of his professional life to incident response, digital forensics and what the cool kids call now cyber threat intelligence. Before joining CERT-EU, he built a CSIRT for a large multinational company, worked at CERT Société Générale and created CERT-BDF, the cyberdefence team of Banque de France, the French national central bank. A convinced retromodernist with a knack for individualistic altruism, he gave trainings, workshops and spoke at conferences such as Hack.lu, the FIRST conference, BSides Lisbon and NorthSec. He is also one of the organisers of the Botconf conference.
 
 
+## <a name="Snarf+it%21+Firmware+extraction+and+analysis+with+open+source+tools."></a>Snarf it! Firmware extraction and analysis with open source tools.
+by Pauline
+
+Problem statement: At the core of every IoT device is its firmware. Detailed security assessment of devices starts with obtaining a copy of the firmware. The firmware can then be statically analysed or dynamically. Several techniques exist for firmware extraction. My workshop takes participants through a low level firmware extraction process which is easy to perform and doesn’t require expensive hardware.
+
+
+### Bio: <a name="Pauline"></a>Pauline
+
+Being a professional analyst and linguist, hardware hacking is a way to escape and
+investigate low level stuff.
+
+
 ## <a name="Hacking+Bluetooth+Low+Energy+devices+with+Btlejack"></a>Hacking Bluetooth Low Energy devices with Btlejack
 by Damien Cauquil
 
@@ -711,18 +746,6 @@ At the big data era, having just an indicator like and IP address is not enough 
 ### Bio: <a name="Celine+Massompierre"></a>Celine Massompierre
 
 Celine is an Incident Handler working at Excellium-services. Hunger to learn new things, she also enjoy sharing her discovery.
-
-
-## <a name="Open+the+safe+and+get+cured."></a>Open the safe and get cured.
-by Stijn Tomme
-
-Open the safe and get cured.
-From manufacturing your network cable to determining the code… and getting the anti-virus
-
-
-### Bio: <a name="Stijn+Tomme"></a>Stijn Tomme
-
-40 years old, been messing around in IT security for about 15 years.
 
 
 ## <a name="Reversing+WebAssembly+Module+101"></a>Reversing WebAssembly Module 101
