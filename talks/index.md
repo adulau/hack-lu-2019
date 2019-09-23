@@ -92,6 +92,17 @@ cards or the security of wireless desktop sets. He is also author of the
 Mifare Classic Tool Android app.
 
 
+## <a name="Piercing+the+Veil%3A+Server+Side+Request+Forgery+attacks+on+Internal+Networks."></a>Piercing the Veil: Server Side Request Forgery attacks on Internal Networks.
+by Alyssa Herrera
+
+I demonstrate a successful attack on a cloud-based US Defense website, gaining access to a sensitive internal network, enumeration of internal services, out of bands data leakage and attack vectors unique to cloud architecture. Additionally I will discuss mitigation points for server side request forgery, how this type of vulnerability can manifest, what this type of attack is, and how I'm able to legally hack the Department Of U.S Defense.
+
+
+### Bio: <a name="Alyssa+Herrera"></a>Alyssa Herrera
+
+Alyssa Herrera is a full-time bug bounty hacker, working to protect countless organizations including the U.S. Department of Defense (DoD), Sony, Zendesk, Adobe, and Twitter. She got her start when she was in middle school, teaching herself how to gain administrative access to play games on her school computers. At age 16, Alyssa Herrera discovered Bug Bounties and HackerOne — and she hasn't looked back since. She is currently a top ranked hacker on multiple bug bounty platforms and has discovered 161 valid vulnerabilities on the HackerOne platform alone to date. Alyssa attends live hacking events across the globe, where she has the opportunity to work with small groups of hackers to find vulnerabilities in organizations such as Verizon Media and Airbnb. As Alyssa paves her own path, she is motivated to give back to the community by sharing the knowledge she has gained and become a role model for other aspiring female hackers.
+
+
 ## <a name="Sensor+%26+Logic+Attack+Surface+of+Driverless+Vehicles"></a>Sensor & Logic Attack Surface of Driverless Vehicles
 by Zoz
 
@@ -497,17 +508,6 @@ Damien is a senior security researcher who joined Digital Security in 2015 as he
   Damien presented at various security conferences including DEF CON, Hack In Paris, Chaos Communication Camp, Chaos Communication Congress, BruCon, Hack.lu, anda dozen times at Nuit du Hack, one of the oldest French hacking conference.
 
 
-## <a name="Piercing+the+Veil%3A+Server+Side+Request+Forgery+attacks+on+Internal+Networks."></a>Piercing the Veil: Server Side Request Forgery attacks on Internal Networks.
-by Alyssa Herrera
-
-I demonstrate a successful attack on a cloud-based US Defense website, gaining access to a sensitive internal network, enumeration of internal services, out of bands data leakage and attack vectors unique to cloud architecture. Additionally I will discuss mitigation points for server side request forgery, how this type of vulnerability can manifest, what this type of attack is, and how I'm able to legally hack the Department Of U.S Defense.
-
-
-### Bio: <a name="Alyssa+Herrera"></a>Alyssa Herrera
-
-Alyssa Herrera is a full-time bug bounty hacker, working to protect countless organizations including the U.S. Department of Defense (DoD), Sony, Zendesk, Adobe, and Twitter. She got her start when she was in middle school, teaching herself how to gain administrative access to play games on her school computers. At age 16, Alyssa Herrera discovered Bug Bounties and HackerOne — and she hasn't looked back since. She is currently a top ranked hacker on multiple bug bounty platforms and has discovered 161 valid vulnerabilities on the HackerOne platform alone to date. Alyssa attends live hacking events across the globe, where she has the opportunity to work with small groups of hackers to find vulnerabilities in organizations such as Verizon Media and Airbnb. As Alyssa paves her own path, she is motivated to give back to the community by sharing the knowledge she has gained and become a role model for other aspiring female hackers.
-
-
 # Workshops
 
 ## <a name="Faup+workshop%2C+parse+and+investigate+URLs%21"></a>Faup workshop, parse and investigate URLs!
@@ -586,6 +586,19 @@ How to create Sigma rules and hunt evil in logs.
 Thomas Patzke has more than 13 years of experience in the area of information security, currently works as blue teamer and threat hunter at thyssenkrupp CERT and still owns no certification. He likes to [create and contribute to open source security tools](https://github.com/thomaspatzke) and is one of the creators of [Sigma](https://github.com/Neo23x0/sigma).
 
 
+## <a name="Introduction+to+WHIDS+an+Open+Source+Endpoint+Detection+System+for+Windows"></a>Introduction to WHIDS an Open Source Endpoint Detection System for Windows
+by Quentin JEROME
+
+[WHIDS](https://github.com/0xrawsec/whids) is one of the first open source endpoint detection solution for windows designed with fast Incident Response in mind. It comes with a powerful rule definition format known as [Gene](https://github.com/0xrawsec/gene) allowing one to achieve complex detection primitives. One of its strengths compared to other approaches is that it dumps artifacts (process, file, registry) based on the criticality of the events detected. This allows one to collect artifacts as close as possible of the alert generated. This approach reduces considerably the incident response process while putting the focus on artifact analysis automation. 
+
+The purpose of this workshop will be twofold. In the first place I will introduce the tool and the rule definition format (30 to 45 mins). In a second part some hands-on with the attendees will be made (the rest of the time). The first part of the hands-on will cover simple WHIDS deployment and tweaking. Then comes a realistic case study. In the first place we will study a technique (or a malware) common to everyone and walk through all the steps leading to the final rule creation. Then the attendees will study on their own a technique or malware sample of their choice and build the appropriate detection rule(s). In the last part we will discuss on the possible implementations in a production environment.
+
+
+### Bio: <a name="Quentin+JEROME"></a>Quentin JEROME
+
+Quentin has been working as incident handler since five years. He is not expert in anything, he just knows how to do several things (programming, reversing, digital forensics ...). He is interested in several topics in IT security ranging from threat detection to bug hunting but what he likes above all is to develop his own tools even though sometimes he reinvent the wheel, just because it is nice to understand how a wheel is made.
+
+
 ## <a name="Java+Web+Application+Secure+Coding+Workshop"></a>Java Web Application Secure Coding Workshop
 by Eva Szilagyi
 
@@ -597,6 +610,19 @@ Context-dependent output encoding? Prepared statement with bind variables? Disab
 Eva Szilagyi is managing partner and CEO of Alzette Information Security, a consulting company based in Luxembourg.  She has more than eight years of professional experience in penetration testing, security source code review, vulnerability management, digital forensics, IT auditing, telecommunication networks, and security research. 
  
 Eva has master's degrees in electrical engineering and in networks and telecommunication.  She holds several IT security certifications such as GSEC, GICSP, GMON, GSSP-JAVA, GWAPT, GMOB, CCSK, eWPT, and eJPT.  Eva speaks on a regular basis at international conferences like BruCON, Hack.lu, Nuit du Hack, Hacktivity, Black Alps, BSides Munich, BSidesBUD, Pass the SALT, Security Session and she is a member of the organizer team of BSides Luxembourg.
+
+
+## <a name="Snarf+it%21+Firmware+extraction+and+analysis+with+open+source+tools."></a>Snarf it! Firmware extraction and analysis with open source tools.
+by Pauline
+
+At the core of every IoT device is its firmware. Detailed security assessment of devices starts with obtaining a copy of the firmware. The firmware can then be statically analysed or dynamically. Several techniques exist for firmware extraction. 
+This workshop takes participants through a low level firmware extraction process which is easy to perform and doesn’t require expensive hardware.
+
+
+### Bio: <a name="Pauline"></a>Pauline
+
+Being a professional analyst and linguist, hardware hacking is a way to escape and
+investigate low level stuff.
 
 
 ## <a name="AppSec+101%3A+Understanding+and+exploiting+buffer+overflows"></a>AppSec 101: Understanding and exploiting buffer overflows
@@ -693,18 +719,6 @@ So come join us for three hours of **practical** incident response where **autom
 With more than 20 years of experience in operational cybersecurity, Saâd is the head of CERT-EU and the leader of TheHive Project. He devoted the last eleven years of his professional life to incident response, digital forensics and what the cool kids call now cyber threat intelligence. Before joining CERT-EU, he built a CSIRT for a large multinational company, worked at CERT Société Générale and created CERT-BDF, the cyberdefence team of Banque de France, the French national central bank. A convinced retromodernist with a knack for individualistic altruism, he gave trainings, workshops and spoke at conferences such as Hack.lu, the FIRST conference, BSides Lisbon and NorthSec. He is also one of the organisers of the Botconf conference.
 
 
-## <a name="Snarf+it%21+Firmware+extraction+and+analysis+with+open+source+tools."></a>Snarf it! Firmware extraction and analysis with open source tools.
-by Pauline
-
-Problem statement: At the core of every IoT device is its firmware. Detailed security assessment of devices starts with obtaining a copy of the firmware. The firmware can then be statically analysed or dynamically. Several techniques exist for firmware extraction. My workshop takes participants through a low level firmware extraction process which is easy to perform and doesn’t require expensive hardware.
-
-
-### Bio: <a name="Pauline"></a>Pauline
-
-Being a professional analyst and linguist, hardware hacking is a way to escape and
-investigate low level stuff.
-
-
 ## <a name="Hacking+Bluetooth+Low+Energy+devices+with+Btlejack"></a>Hacking Bluetooth Low Energy devices with Btlejack
 by Damien Cauquil
 
@@ -763,17 +777,4 @@ Patrick Ventuzelo is a french security researcher specializing in Vulnerability 
 Previously, Patrick was working for Quoscient GmbH, P1 Security, the French Department Of Defense and Airbus D&S Cybersecurity.
 
 Patrick has been Speaker and Trainer at various international security conferences (FIRST, Northsec, BlackAlps, hack.lu, Toorcon, REcon Montreal/Brussels, SSTIC)
-
-
-## <a name="Introduction+to+WHIDS+an+Open+Source+Endpoint+Detection+System+for+Windows"></a>Introduction to WHIDS an Open Source Endpoint Detection System for Windows
-by Quentin JEROME
-
-WHIDS is one of the first open source endpoint detection solution for windows designed with fast Incident Response in mind. It comes with a powerful rule definition format known as Gene allowing one to achieve complex detection primitives. One of its strengths compared to other approaches is that it dumps artifacts (process, file, registry) based on the criticality of the events detected. This allows one to collect artifacts as close as possible of the alert generated. This approach reduces considerably the incident response process while putting the focus on artifact analysis automation. 
-
-The purpose of this workshop will be twofold. In the first place I will introduce the tool and the rule definition format (30 to 45 mins). In a second part some hands-on with the attendees will be made (the rest of the time). The first part of the hands-on will cover simple WHIDS deployment and tweaking. Then comes a realistic case study. In the first place we will study a technique (or a malware) common to everyone and walk through all the steps leading to the final rule creation. Then the attendees will study on their own a technique or malware sample of their choice and build the appropriate detection rule(s). In the last part we will discuss on the possible implementations in a production environment.
-
-
-### Bio: <a name="Quentin+JEROME"></a>Quentin JEROME
-
-Quentin is has been working as incident handler since five years. He is not expert in anything, he just knows how to do several things (programming, reversing, digital forensics ...). He is interested in several topics in IT security ranging from threat detection to bug hunting but what he likes above all is to develop his own tools even though sometimes he reinvent the wheel, just because it is nice to understand how a wheel is made.
 
