@@ -37,10 +37,17 @@ speaker_template = '''
 
 '''
 
+got_recurrent = False
+
 for talk in talks['results']:
     if talk['state'] != 'confirmed':
         print('NOT CONFIRMED', talk['title'])
         continue
+    if talk['title'] == 'Open the safe and get cured.':
+        if got_recurrent:
+            continue
+        else:
+            got_recurrent = True
     md_talk = talk_template.format(escaped_title=quote_plus(talk['title']),
                                    title=talk['title'],
                                    speaker=', '.join([speaker['name'] for speaker in talk['speakers']]),
