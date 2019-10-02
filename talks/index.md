@@ -92,17 +92,6 @@ cards or the security of wireless desktop sets. He is also author of the
 Mifare Classic Tool Android app.
 
 
-## <a name="Piercing+the+Veil%3A+Server+Side+Request+Forgery+attacks+on+Internal+Networks."></a>Piercing the Veil: Server Side Request Forgery attacks on Internal Networks.
-by Alyssa Herrera
-
-I demonstrate a successful attack on a cloud-based US Defense website, gaining access to a sensitive internal network, enumeration of internal services, out of bands data leakage and attack vectors unique to cloud architecture. Additionally I will discuss mitigation points for server side request forgery, how this type of vulnerability can manifest, what this type of attack is, and how I'm able to legally hack the Department Of U.S Defense.
-
-
-### Bio: <a name="Alyssa+Herrera"></a>Alyssa Herrera
-
-Alyssa Herrera is a full-time bug bounty hacker, working to protect countless organizations including the U.S. Department of Defense (DoD), Sony, Zendesk, Adobe, and Twitter. She got her start when she was in middle school, teaching herself how to gain administrative access to play games on her school computers. At age 16, Alyssa Herrera discovered Bug Bounties and HackerOne — and she hasn't looked back since. She is currently a top ranked hacker on multiple bug bounty platforms and has discovered 161 valid vulnerabilities on the HackerOne platform alone to date. Alyssa attends live hacking events across the globe, where she has the opportunity to work with small groups of hackers to find vulnerabilities in organizations such as Verizon Media and Airbnb. As Alyssa paves her own path, she is motivated to give back to the community by sharing the knowledge she has gained and become a role model for other aspiring female hackers.
-
-
 ## <a name="Sensor+%26+Logic+Attack+Surface+of+Driverless+Vehicles"></a>Sensor & Logic Attack Surface of Driverless Vehicles
 by Zoz
 
@@ -222,24 +211,71 @@ The preso contains plenty of expressive screenshots.
 As former deputy head of Cybercrime Division at Security Service of Ukraine (colonel ret.), Kostyantyn Korsun was one of the founders and the first head of CERT-UA. After resigning from the service, Kos acted as Regional Director for Ukraine Research Office of iSIGHT Partners, international cyber threat intelligence company. Then he cooperated with Symantec Corp. as an official vendor of Threat Intelligence service. Currently a CEO and Co-Founder of Berezhs Security LLC., a company that provides services in Penetration Testing, Security Awareness Programs, Software Security Assessment, Bug Bounty Program, Social Engineering Assessment, Application Security Programs. Mr. Korsun is an active member of the local cyber community in Ukraine promoting cybersecurity ideas within Ukrainian society.
 
 
-## <a name="DNS+On+Fire"></a>DNS On Fire
-by Rascagneres Paul, Warren Mercer
+## <a name="Exploiting+bug+report+systems+in+the+game+industry"></a>Exploiting bug report systems in the game industry
+by Andreia Gaita
 
-Cisco Talos identified malicious actors targeting the DNS protocol successfully for the past several years. In the presentation, we will present 2 threat actors we have been tracking.
+In the world of development, what do you do when you run into a bug in the library, framework, or middleware you're using? You submit a bug report and describe the steps. The companies providing you with the software expect and encourage you to send in repro code, but the bigger the system, the more complex the code needs to be to reproduce the problem. In the case of game development, the expectation is that when you find a bug, you submit a complete test project that exemplifies the problem, so that test teams can reproduce it. What can these test projects contain? How are they tested by companies developing game engines and middleware? What potential exploitation venues does this open?
 
-The first one developed a piece of malware, named DNSpionage, targeting several government agencies in the Middle East, as well as an airline. During the research process for DNSpionage, we also discovered an effort to redirect DNSs from the targets and discovered some registered SSL certificates for them. We identified multiple countries targeted by this redirection. On 22 January 2019, the US DHS published a directive concerning this attack vector. In this presentation, we will present the timeline for these events and their technical details. 
-
-The second actor is behind the campaign we named “Sea Turtle”. This actor is more advanced and more aggressive than the previous one. They do not hesitate to target directly registrars and one registry. The talk will present the 2 actors and the methodology used to target the victims.
+There are unique conditions in the game industry that make it particularly vulnerable to certain types of attacks, but its uniqueness also makes it somewhat of a puzzle to the rest of the tech industry. In this talk, we'll go through some of the particulars of how game development works, and how these practices and bug reporting systems can be exploited to gain access to the core of development teams across the game industry.
 
 
-### Bio: <a name="Rascagneres+Paul"></a>Rascagneres Paul
+### Bio: <a name="Andreia+Gaita"></a>Andreia Gaita
 
-Paul is a security researcher within Talos, Cisco’s threat intelligence and research organization. As a researcher, he performs investigations to identify new threats and presents his findings as publications and at international security conferences throughout the world. He has been involved in security research for 7 years, mainly focusing on malware analysis, malware hunting and more specially on Advanced Persistence Threat campaigns and rootkit capabilities. He previously worked for several incident response team within the private and public sectors.
-
-
-### Bio: <a name="Warren+Mercer"></a>Warren Mercer
+Andreia Gaita is a freelance cross-platform games and tools developer, recently shifting her focus to security work. For the past 18 years, she has been involved in the development of game engines, applications, open source tools and libraries, and has been an engineering manager and tech lead at companies like GitHub, Unity, and Xamarin. She hails from the sunny city of Lisbon, Portugal, and currently lives in Copenhagen, Denmark, where she bikes a lot (when it's warm).
 
 
+## <a name="Beyond+Windows+Forensics+with+Built-in+Microsoft+Tooling"></a>Beyond Windows Forensics with Built-in Microsoft Tooling
+by Thomas Fischer
+
+Microsoft has slowly been introducing tools to help organisations better manage and troubleshoot Windows performance and issues; these are now entirely integrated into Windows. To improve performance and troubleshooting capabilities, Microsoft introduced System Resource Usage Monitor (SRUM) in Windows 8 and beyond. PowerShell has become the default “command line” management tool for windows administrators. These tools provide both a wealth of information into what has happened and is present on the system.
+
+For Forensics and even Incident Response, these tools are now a go to built-in option to bootstrap and drive the forensics process including opening access to artefacts that overzealous user or even a “smart” attacker has removed. SRUM for instance can provide data points ranging from network to process activitiy providing insight into what, who, when and how an attacker or malicious process introduced itself into the environment. 
+
+This talk will help the participant build the foundations to identify which built in tools can assist in the Windows Forensics process and the data points that are available as well as examine how services such as SRUM can be used to extract key data points to provide information for incident response or threat hunting activities.
+
+
+### Bio: <a name="Thomas+Fischer"></a>Thomas Fischer
+
+Thomas has over 30 years of experience in the IT industry ranging from software development to infrastructure & network operations and architecture to settle in information security. He has an extensive security background covering roles from incident responder to security architect at fortune 500 companies, vendors and consulting organisations. He is currently security advocate and threat researcher focused on advising companies on understanding their data protection activities against malicious parties not just for external threats but also compliance instigated.
+
+Thomas is also an active participant in the InfoSec community not only as a member but also as director of Security BSides London, ISSA UK chapter board member and speaker at events like SANS DFIR EMEA, DeepSec, Shmoocon, Troopers and various BSides events.
+
+
+## <a name="Defeating+Bluetooth+Low+Energy+5+PRNG+for+fun+and+jamming"></a>Defeating Bluetooth Low Energy 5 PRNG for fun and jamming
+by Damien Cauquil
+
+Bluetooth Low energy version 5 has been published in late 2016, but we still have
+  no sniffer supporting this specific version (and not that much compatible devices
+  as well). The problem is this new version introduces a new channel hopping algorithm
+  that renders previous sniffing tools useless as devices can no longer be attacked
+  and connections analyzed. This new algorithm is based on a brand new pseudo-random
+  number generator (PRNG) to provide better collision avoidance while kicking out
+  all of our good old sniffing tools.
+
+  Unless some random hacker manages to break this not-that-strong PRNG and upgrades
+  his BLE sniffing tool to support this algorithm ;). In this talk, we will explain
+  why this PRNG is vulnerable and how it can be easily defeated to sniff and jam
+  communications between two BLE 5 devices. A new version of BtleJack will be
+  released during this talk, providing an efficient way to sniff BLE 5 connections
+  to our fellow IoT hacker family.
+
+
+### Bio: <a name="Damien+Cauquil"></a>Damien Cauquil
+
+Damien is a senior security researcher who joined Digital Security in 2015 as head of research and development. He discovered how wireless protocols can be fun to hack and quickly developed BtleJuice, one of the first Bluetooth Low Energy MitM framework, and BtleJack, a BLE swiss-army knife released in 2018.
+
+  Damien presented at various security conferences including DEF CON, Hack In Paris, Chaos Communication Camp, Chaos Communication Congress, BruCon, Hack.lu, anda dozen times at Nuit du Hack, one of the oldest French hacking conference.
+
+
+## <a name="Piercing+the+Veil%3A+Server+Side+Request+Forgery+attacks+on+Internal+Networks."></a>Piercing the Veil: Server Side Request Forgery attacks on Internal Networks.
+by Alyssa Herrera
+
+I demonstrate a successful attack on a cloud-based US Defense website, gaining access to a sensitive internal network, enumeration of internal services, out of bands data leakage and attack vectors unique to cloud architecture. Additionally I will discuss mitigation points for server side request forgery, how this type of vulnerability can manifest, what this type of attack is, and how I'm able to legally hack the Department Of U.S Defense.
+
+
+### Bio: <a name="Alyssa+Herrera"></a>Alyssa Herrera
+
+Alyssa Herrera is a full-time bug bounty hacker, working to protect countless organizations including the U.S. Department of Defense (DoD), Sony, Zendesk, Adobe, and Twitter. She got her start when she was in middle school, teaching herself how to gain administrative access to play games on her school computers. At age 16, Alyssa Herrera discovered Bug Bounties and HackerOne — and she hasn't looked back since. She is currently a top ranked hacker on multiple bug bounty platforms and has discovered 161 valid vulnerabilities on the HackerOne platform alone to date. Alyssa attends live hacking events across the globe, where she has the opportunity to work with small groups of hackers to find vulnerabilities in organizations such as Verizon Media and Airbnb. As Alyssa paves her own path, she is motivated to give back to the community by sharing the knowledge she has gained and become a role model for other aspiring female hackers.
 
 
 ## <a name="Who+contains+the+containers"></a>Who contains the containers
@@ -452,60 +488,24 @@ Emilien Le Jamtel is a French security analyst, versatile member of CERT-EU sinc
 
 
 
-## <a name="Exploiting+bug+report+systems+in+the+game+industry"></a>Exploiting bug report systems in the game industry
-by Andreia Gaita
+## <a name="DNS+On+Fire"></a>DNS On Fire
+by Rascagneres Paul, Warren Mercer
 
-In the world of development, what do you do when you run into a bug in the library, framework, or middleware you're using? You submit a bug report and describe the steps. The companies providing you with the software expect and encourage you to send in repro code, but the bigger the system, the more complex the code needs to be to reproduce the problem. In the case of game development, the expectation is that when you find a bug, you submit a complete test project that exemplifies the problem, so that test teams can reproduce it. What can these test projects contain? How are they tested by companies developing game engines and middleware? What potential exploitation venues does this open?
+Cisco Talos identified malicious actors targeting the DNS protocol successfully for the past several years. In the presentation, we will present 2 threat actors we have been tracking.
 
-There are unique conditions in the game industry that make it particularly vulnerable to certain types of attacks, but its uniqueness also makes it somewhat of a puzzle to the rest of the tech industry. In this talk, we'll go through some of the particulars of how game development works, and how these practices and bug reporting systems can be exploited to gain access to the core of development teams across the game industry.
+The first one developed a piece of malware, named DNSpionage, targeting several government agencies in the Middle East, as well as an airline. During the research process for DNSpionage, we also discovered an effort to redirect DNSs from the targets and discovered some registered SSL certificates for them. We identified multiple countries targeted by this redirection. On 22 January 2019, the US DHS published a directive concerning this attack vector. In this presentation, we will present the timeline for these events and their technical details. 
 
-
-### Bio: <a name="Andreia+Gaita"></a>Andreia Gaita
-
-Andreia Gaita is a freelance cross-platform games and tools developer, recently shifting her focus to security work. For the past 18 years, she has been involved in the development of game engines, applications, open source tools and libraries, and has been an engineering manager and tech lead at companies like GitHub, Unity, and Xamarin. She hails from the sunny city of Lisbon, Portugal, and currently lives in Copenhagen, Denmark, where she bikes a lot (when it's warm).
+The second actor is behind the campaign we named “Sea Turtle”. This actor is more advanced and more aggressive than the previous one. They do not hesitate to target directly registrars and one registry. The talk will present the 2 actors and the methodology used to target the victims.
 
 
-## <a name="Beyond+Windows+Forensics+with+Built-in+Microsoft+Tooling"></a>Beyond Windows Forensics with Built-in Microsoft Tooling
-by Thomas Fischer
+### Bio: <a name="Rascagneres+Paul"></a>Rascagneres Paul
 
-Microsoft has slowly been introducing tools to help organisations better manage and troubleshoot Windows performance and issues; these are now entirely integrated into Windows. To improve performance and troubleshooting capabilities, Microsoft introduced System Resource Usage Monitor (SRUM) in Windows 8 and beyond. PowerShell has become the default “command line” management tool for windows administrators. These tools provide both a wealth of information into what has happened and is present on the system.
-
-For Forensics and even Incident Response, these tools are now a go to built-in option to bootstrap and drive the forensics process including opening access to artefacts that overzealous user or even a “smart” attacker has removed. SRUM for instance can provide data points ranging from network to process activitiy providing insight into what, who, when and how an attacker or malicious process introduced itself into the environment. 
-
-This talk will help the participant build the foundations to identify which built in tools can assist in the Windows Forensics process and the data points that are available as well as examine how services such as SRUM can be used to extract key data points to provide information for incident response or threat hunting activities.
+Paul is a security researcher within Talos, Cisco’s threat intelligence and research organization. As a researcher, he performs investigations to identify new threats and presents his findings as publications and at international security conferences throughout the world. He has been involved in security research for 7 years, mainly focusing on malware analysis, malware hunting and more specially on Advanced Persistence Threat campaigns and rootkit capabilities. He previously worked for several incident response team within the private and public sectors.
 
 
-### Bio: <a name="Thomas+Fischer"></a>Thomas Fischer
-
-Thomas has over 30 years of experience in the IT industry ranging from software development to infrastructure & network operations and architecture to settle in information security. He has an extensive security background covering roles from incident responder to security architect at fortune 500 companies, vendors and consulting organisations. He is currently security advocate and threat researcher focused on advising companies on understanding their data protection activities against malicious parties not just for external threats but also compliance instigated.
-
-Thomas is also an active participant in the InfoSec community not only as a member but also as director of Security BSides London, ISSA UK chapter board member and speaker at events like SANS DFIR EMEA, DeepSec, Shmoocon, Troopers and various BSides events.
+### Bio: <a name="Warren+Mercer"></a>Warren Mercer
 
 
-## <a name="Defeating+Bluetooth+Low+Energy+5+PRNG+for+fun+and+jamming"></a>Defeating Bluetooth Low Energy 5 PRNG for fun and jamming
-by Damien Cauquil
-
-Bluetooth Low energy version 5 has been published in late 2016, but we still have
-  no sniffer supporting this specific version (and not that much compatible devices
-  as well). The problem is this new version introduces a new channel hopping algorithm
-  that renders previous sniffing tools useless as devices can no longer be attacked
-  and connections analyzed. This new algorithm is based on a brand new pseudo-random
-  number generator (PRNG) to provide better collision avoidance while kicking out
-  all of our good old sniffing tools.
-
-  Unless some random hacker manages to break this not-that-strong PRNG and upgrades
-  his BLE sniffing tool to support this algorithm ;). In this talk, we will explain
-  why this PRNG is vulnerable and how it can be easily defeated to sniff and jam
-  communications between two BLE 5 devices. A new version of BtleJack will be
-  released during this talk, providing an efficient way to sniff BLE 5 connections
-  to our fellow IoT hacker family.
-
-
-### Bio: <a name="Damien+Cauquil"></a>Damien Cauquil
-
-Damien is a senior security researcher who joined Digital Security in 2015 as head of research and development. He discovered how wireless protocols can be fun to hack and quickly developed BtleJuice, one of the first Bluetooth Low Energy MitM framework, and BtleJack, a BLE swiss-army knife released in 2018.
-
-  Damien presented at various security conferences including DEF CON, Hack In Paris, Chaos Communication Camp, Chaos Communication Congress, BruCon, Hack.lu, anda dozen times at Nuit du Hack, one of the oldest French hacking conference.
 
 
 # Workshops
@@ -586,19 +586,6 @@ How to create Sigma rules and hunt evil in logs.
 Thomas Patzke has more than 13 years of experience in the area of information security, currently works as blue teamer and threat hunter at thyssenkrupp CERT and still owns no certification. He likes to [create and contribute to open source security tools](https://github.com/thomaspatzke) and is one of the creators of [Sigma](https://github.com/Neo23x0/sigma).
 
 
-## <a name="Introduction+to+WHIDS+an+Open+Source+Endpoint+Detection+System+for+Windows"></a>Introduction to WHIDS an Open Source Endpoint Detection System for Windows
-by Quentin JEROME
-
-[WHIDS](https://github.com/0xrawsec/whids) is one of the first open source endpoint detection solution for windows designed with fast Incident Response in mind. It comes with a powerful rule definition format known as [Gene](https://github.com/0xrawsec/gene) allowing one to achieve complex detection primitives. One of its strengths compared to other approaches is that it dumps artifacts (process, file, registry) based on the criticality of the events detected. This allows one to collect artifacts as close as possible of the alert generated. This approach reduces considerably the incident response process while putting the focus on artifact analysis automation. 
-
-The purpose of this workshop will be twofold. In the first place I will introduce the tool and the rule definition format (30 to 45 mins). In a second part some hands-on with the attendees will be made (the rest of the time). The first part of the hands-on will cover simple WHIDS deployment and tweaking. Then comes a realistic case study. In the first place we will study a technique (or a malware) common to everyone and walk through all the steps leading to the final rule creation. Then the attendees will study on their own a technique or malware sample of their choice and build the appropriate detection rule(s). In the last part we will discuss on the possible implementations in a production environment.
-
-
-### Bio: <a name="Quentin+JEROME"></a>Quentin JEROME
-
-Quentin has been working as incident handler since five years. He is not expert in anything, he just knows how to do several things (programming, reversing, digital forensics ...). He is interested in several topics in IT security ranging from threat detection to bug hunting but what he likes above all is to develop his own tools even though sometimes he reinvent the wheel, just because it is nice to understand how a wheel is made.
-
-
 ## <a name="Java+Web+Application+Secure+Coding+Workshop"></a>Java Web Application Secure Coding Workshop
 by Eva Szilagyi
 
@@ -610,19 +597,6 @@ Context-dependent output encoding? Prepared statement with bind variables? Disab
 Eva Szilagyi is managing partner and CEO of Alzette Information Security, a consulting company based in Luxembourg.  She has more than eight years of professional experience in penetration testing, security source code review, vulnerability management, digital forensics, IT auditing, telecommunication networks, and security research. 
  
 Eva has master's degrees in electrical engineering and in networks and telecommunication.  She holds several IT security certifications such as GSEC, GICSP, GMON, GSSP-JAVA, GWAPT, GMOB, CCSK, eWPT, and eJPT.  Eva speaks on a regular basis at international conferences like BruCON, Hack.lu, Nuit du Hack, Hacktivity, Black Alps, BSides Munich, BSidesBUD, Pass the SALT, Security Session and she is a member of the organizer team of BSides Luxembourg.
-
-
-## <a name="Snarf+it%21+Firmware+extraction+and+analysis+with+open+source+tools."></a>Snarf it! Firmware extraction and analysis with open source tools.
-by Pauline
-
-At the core of every IoT device is its firmware. Detailed security assessment of devices starts with obtaining a copy of the firmware. The firmware can then be statically analysed or dynamically. Several techniques exist for firmware extraction. 
-This workshop takes participants through a low level firmware extraction process which is easy to perform and doesn’t require expensive hardware.
-
-
-### Bio: <a name="Pauline"></a>Pauline
-
-Being a professional analyst and linguist, hardware hacking is a way to escape and
-investigate low level stuff.
 
 
 ## <a name="AppSec+101%3A+Understanding+and+exploiting+buffer+overflows"></a>AppSec 101: Understanding and exploiting buffer overflows
@@ -719,6 +693,19 @@ So come join us for three hours of **practical** incident response where **autom
 With more than 20 years of experience in operational cybersecurity, Saâd is the head of CERT-EU and the leader of TheHive Project. He devoted the last eleven years of his professional life to incident response, digital forensics and what the cool kids call now cyber threat intelligence. Before joining CERT-EU, he built a CSIRT for a large multinational company, worked at CERT Société Générale and created CERT-BDF, the cyberdefence team of Banque de France, the French national central bank. A convinced retromodernist with a knack for individualistic altruism, he gave trainings, workshops and spoke at conferences such as Hack.lu, the FIRST conference, BSides Lisbon and NorthSec. He is also one of the organisers of the Botconf conference.
 
 
+## <a name="Snarf+it%21+Firmware+extraction+and+analysis+with+open+source+tools."></a>Snarf it! Firmware extraction and analysis with open source tools.
+by Pauline
+
+At the core of every IoT device is its firmware. Detailed security assessment of devices starts with obtaining a copy of the firmware. The firmware can then be statically analysed or dynamically. Several techniques exist for firmware extraction. 
+This workshop takes participants through a low level firmware extraction process which is easy to perform and doesn’t require expensive hardware.
+
+
+### Bio: <a name="Pauline"></a>Pauline
+
+Being a professional analyst and linguist, hardware hacking is a way to escape and
+investigate low level stuff.
+
+
 ## <a name="Hacking+Bluetooth+Low+Energy+devices+with+Btlejack"></a>Hacking Bluetooth Low Energy devices with Btlejack
 by Damien Cauquil
 
@@ -777,4 +764,17 @@ Patrick Ventuzelo is a french security researcher specializing in Vulnerability 
 Previously, Patrick was working for Quoscient GmbH, P1 Security, the French Department Of Defense and Airbus D&S Cybersecurity.
 
 Patrick has been Speaker and Trainer at various international security conferences (FIRST, Northsec, BlackAlps, hack.lu, Toorcon, REcon Montreal/Brussels, SSTIC)
+
+
+## <a name="Introduction+to+WHIDS+an+Open+Source+Endpoint+Detection+System+for+Windows"></a>Introduction to WHIDS an Open Source Endpoint Detection System for Windows
+by Quentin JEROME
+
+[WHIDS](https://github.com/0xrawsec/whids) is one of the first open source endpoint detection solution for windows designed with fast Incident Response in mind. It comes with a powerful rule definition format known as [Gene](https://github.com/0xrawsec/gene) allowing one to achieve complex detection primitives. One of its strengths compared to other approaches is that it dumps artifacts (process, file, registry) based on the criticality of the events detected. This allows one to collect artifacts as close as possible of the alert generated. This approach reduces considerably the incident response process while putting the focus on artifact analysis automation. 
+
+The purpose of this workshop will be twofold. In the first place I will introduce the tool and the rule definition format (30 to 45 mins). In a second part some hands-on with the attendees will be made (the rest of the time). The first part of the hands-on will cover simple WHIDS deployment and tweaking. Then comes a realistic case study. In the first place we will study a technique (or a malware) common to everyone and walk through all the steps leading to the final rule creation. Then the attendees will study on their own a technique or malware sample of their choice and build the appropriate detection rule(s). In the last part we will discuss on the possible implementations in a production environment.
+
+
+### Bio: <a name="Quentin+JEROME"></a>Quentin JEROME
+
+Quentin has been working as incident handler since five years. He is not expert in anything, he just knows how to do several things (programming, reversing, digital forensics ...). He is interested in several topics in IT security ranging from threat detection to bug hunting but what he likes above all is to develop his own tools even though sometimes he reinvent the wheel, just because it is nice to understand how a wheel is made.
 
