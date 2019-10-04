@@ -23,18 +23,12 @@ to support analysts, knowledge base and sharing of information.
 
 The objective of the summit is openly discuss about the current usage of MISP, the future developments and the integration with the overall security ecosystems.
 
-Agenda
-------
+Agenda and Talks
+----------------
 
 The MISP Summit will take place from 10:00 to 17:00, Monday 21th October 2019.
 
-Agenda will be published after the selection of papers.
-
-[Call For Papers for the MISP threat intelligence submit](https://cfp.hack.lu/tsc19/cfp) is open and we welcome all contributions to gather use cases, best practices, new developments, creative approaches in threat intelligence and especially users of the MISP platform.
-
-
-Talks
------
+The agenda can be consulted at [https://cfp.hack.lu/tsc19/schedule/](https://cfp.hack.lu/tsc19/schedule/).
 
 Where
 -----
