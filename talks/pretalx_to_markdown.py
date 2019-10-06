@@ -28,6 +28,8 @@ by {speaker}
 
 {abstract}
 
+{description}
+
 '''
 
 speaker_template = '''
@@ -43,6 +45,7 @@ for talk in talks['results']:
     if talk['state'] != 'confirmed':
         print('NOT CONFIRMED', talk['title'])
         continue
+    print(talk['title'])
     if talk['title'] == 'Open the safe and get cured.':
         if got_recurrent:
             continue
@@ -51,7 +54,8 @@ for talk in talks['results']:
     md_talk = talk_template.format(escaped_title=quote_plus(talk['title']),
                                    title=talk['title'],
                                    speaker=', '.join([speaker['name'] for speaker in talk['speakers']]),
-                                   abstract=talk['abstract'].replace('\r', ''))
+                                   abstract=talk['abstract'].replace('\r', ''),
+                                   description=talk['description'].replace('\r', ''))
     for s in talk['speakers']:
         speaker = p.speakers('hacklu19', s['code'])
         bio = speaker['biography']
@@ -63,7 +67,7 @@ for talk in talks['results']:
                                            escaped_speaker=quote_plus(speaker['name']),
                                            bio=bio)
 
-    if talk['submission_type']['en'] in ['Short talk', 'Talk']:
+    if talk['submission_type']['en'] in ['Short Talk', 'Talk']:
         all_talks += md_talk
     elif talk['submission_type']['en'] in ['Long Workshop', 'Workshop']:
         all_workshops += md_talk
