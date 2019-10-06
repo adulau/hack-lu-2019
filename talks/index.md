@@ -16,6 +16,8 @@ In this presentation we would like to discuss several information, methods of th
 The information shared in this presentation is set on TLP AMBER.
 
 
+
+
 ### Bio: <a name="%E3%82%A2%E3%83%89%E3%83%AA%E3%82%A2%E3%83%B3+%E3%83%98%E3%83%B3%E3%83%89%E3%83%AA%E3%83%83%E3%82%AF+-+Hendrik+Adrian+-+%40MalwareMustDie"></a>アドリアン ヘンドリック - Hendrik Adrian - @MalwareMustDie
 
 
@@ -29,6 +31,8 @@ Nowadays, the majority of US-based newsrooms rely on primarily consumer-facing a
 With this talk, I aim to explain a theoretical bridge between hackers and other technologists; and the a special group of end-users (journalists and their sources) who are, often without their prior knowledge, at the complete mercy of tools they barely understand under-the-hood. This talk should be as satisfying for hackers as it will be for folks who love to hear spicy stories about the "sausage gets made" in contemporary newsrooms.
 
 
+
+
 ### Bio: <a name="harlo"></a>harlo
 
 Harlo Holmes is the Director of Newsroom Digital Security at Freedom of the Press Foundation. She strives to help individual journalists in various media organizations become confident and effective in securing their communications within their newsrooms, with their sources, and with the public at large. She is a media scholar, software programmer, and activist; and contributes regularly to the open source mobile security collective [The Guardian Project](https://guardianproject.info/).
@@ -36,11 +40,34 @@ Harlo Holmes is the Director of Newsroom Digital Security at Freedom of the Pres
 
 # Talks
 
+## <a name="Defeating+APT10+Compiler-level+Obfuscations"></a>Defeating APT10 Compiler-level Obfuscations
+by Takahiro Haruyama
+
+Compiler-level obfuscations like opaque predicates and control flow flattening are starting to be observed in the wild and will be a challenge for malware analysts and researchers. Opaque predicates and control flow flattening are obfuscation methods used to limit malware analysis by defining unused logic, performing needless calculations, and altering code flow so that it is not linear. Manual analysis of malware utilizing these obfuscations is painful and time-consuming.
+
+ANEL (also referred to as UpperCut) is a RAT used by APT10, typically targeting Japan. All recent ANEL samples are obfuscated with opaque predicates and control flow flattening. In this presentation I will explain how to automatically de-obfuscate the ANEL code by modifying the existing IDA Pro plugin HexRaysDeob. Specifically the following topics will be included.
+
+- Disassembler tool internals (IDA Pro IL microcode)
+- How to define and track opaque predicate patterns for the elimination
+- How to break control flow flattening while considering various conditional/unconditional jump cases even if it heavily depends on the opaque predicate conditions and has multiple switch dispatchers 
+
+The modified tool can work for most obfuscated functions in the tested samples. This implementation can deobfuscate approximately 92% of encountered functions. Additionally, most of the failed functions will be properly deobfuscated in IDA 7.3. Sharing the experience and knowledge of the implementation with the community will be valuable as threat actors other than APT10 may also start to use the same obfuscations.
+
+
+
+
+### Bio: <a name="Takahiro+Haruyama"></a>Takahiro Haruyama
+
+Takahiro Haruyama is a principal threat researcher with Carbon Black's Threat Analysis Unit, with over ten years of extensive experience and knowledge in malware analysis and digital forensics. He previously worked on reverse-engineering cyber espionage malware with Symantec's threat intelligence team. He has spoken at several famous conferences including REcon, HITB, HITCON, SECURE, DFRWS EU, SANS DFIR Summit, FIRST and BlackHat Briefings USA/Europe/Asia.
+
+
 ## <a name="The+Glitch+In+The+Matrix"></a>The Glitch In The Matrix
 by Marion
 
 Compared to the hordes of code reviewers and review tools that skim through pristine source code with every release cycle, the attention binary output gets from security engineers is limited. And why would security folks bother, bugs are all human-made; or, are they? Honestly, in reality, most are. Modern compilers and build setups are rather unlikely to accidentally introduce flaws into binaries, let alone security relevant flaws. Except, well, if an attacker gets her hands onto the build chain...
 Now, it has been established, that compromised compilers can introduce bugs to output binaries; but really, how stealthy can this be? How small of a change can an attacker plant, and still create a security vulnerability? And which means of detection do we have for such glitches in the matrix? Shall we ask Neo?
+
+
 
 
 ### Bio: <a name="Marion"></a>Marion
@@ -52,6 +79,26 @@ Marion Marschalek is a former Malware Analyst and Reverse Engineer who recently 
 by Chris Kubecka
 
 Ever wonder what incident management is like when an embassy gets hacked, by ISIS? Come on a journey of surprisingly weak security, insider threats, a 50 million dollar extortion attempt, diplomatic immunity, city wide security lock down, all while >400 dignitary’s lives dangle in the negotiation crossfire. Join Chris, the lead investigator and resolver on a super-secret squirrel adventure against ISIS & Turkish Intel in The Hague, The Netherlands. Discussing the 2014 Saudi Arabian embassy hack. Whoever said STEM was boring made it boring! Solve the crime and save lives with key takeaways from a real life cyber terrorism investigation.  No classified information will be shared, some terrorists were harmed in the making of this talk.
+
+Presentation about the following two articles and the unclassified portions of the original report I wrote for the Kingdom of Saudi Arabia, Saudi Embassy of the Netherlands and Saudi Aramco.
+https://hackernoon.com/the-road-to-hell-is-paved-with-bad-passwords-ef54815873f9
+https://www.csoonline.com/article/3386381/inside-the-2014-hack-of-a-saudi-embassy.html
+A few years ago, I led an unusual digital crime incident investigation. A mix between cyber crime and cyber terrorism, leaving the events etched my the memory banks. Finding oneself in the midst of terrorist groups and high level political intrigue as a security expert and all around hacker seemed more fitting on a warped version of the IT crowd.
+An Embassy in a European country had been hacked, pwnd hard. The back end, official business email account was targeted and subsequently misused by miscreants who sent out emails as if they were from the Ambassador’s trusted Secretary. Utilizing the compromised account, the nefarious attackers attempted to extort additional visa fees from select VVIP applicants. Time was of utmost importance. Quickly, I assembled a team, myself and one person, a senior forensics expert rockstar. We immediately travelled to the location and began the investigation.
+The Embassy in question was highly distrustful of both the local police and the local Diplomatic Corp Police, a separate branch of police for embassies and diplomatic staff. The Embassy email account was high value, gave attackers access to contacts, communications and could lead to maximum damage to reputation. Non reputation concerns.
+It was the Embassy IT person’s first week on the job and the previous person gave zero hand over. They couldn’t even get in touch with the previous person. The Embassy IT person had zero security experience, pure IT; but was willing to do just about anything to stop the attack. Stopping the damage, the bleeding and securing the email account was a top priority. 
+“What’s the username and password?” I asked, expecting some super duper 26 + character, two factor authentication credential set, virgin blood sacrifice and the attackers were super spies. Answer: embassy@email.com, password is 123456. Yes, 123456. 
+We investigated further, my forensics person checked around, taking samples, network checks via taps. Even though Windows XP was rampant, no real anti-virus was installed. They relied entirely on Microsoft Security Essentials. How good is MSE? “In June 2013, MSE achieved the lowest possible protection score, zero.” We changed the password, thought the worst was over and job done. Lucky for them, only two systems had any internet access and were on a closed network, separate from embassy government operations. Embassies frequently host intelligence services in addition to diplomacy. Glad there was a real separation, almost an air gap.
+
+A few weeks later, as life was getting back to normal, another summoning. At this point, I was never going to eat my lunch. What began as some dodgy emails trying to fraudulently acquire extra visa fees using the embassy email account grew, exponentially. This time, an email went out, again from the official embassy email account, signed as the Ambassador’s Secretary to a handful of friendly embassies asking for 25 thousand Euro in the name of a friend of ISIS.
+Back to the location again, this time alone to try and sort things out. Forensics was no longer required. The Ambassador was concerned it was an insider, as was I. As if we were on some sort of comedy skit on the BBC. We waited until everyone else exited the embassy after it closed for official business. Then, the comedy began by crouching down on our hands and knees looking for passwords written on post-it notes, under desks and other places. We were looking for embassy employee credentials to use their logins so I could further investigate certain employees without their knowledge. By we I mean the Ambassador and I. Never in my life had I expected to see an Ambassador sifting around dusty desks with me, on hands and knees.
+We began to liaise with the Diplomatic Corps Police in a limited extent. At arms length at all times, trust was strained. It took a great deal of effort, meetings with the Ambassador to speak with any outside party.
+Unfortunately, the attackers still had access somehow to the embassy email account. The Diplomatic Police, sending via CC not BCC gave away all the other official embassy back end email addresses. Then the real fun began. The attackers quickly capitalized on the faux pas and sent back an email to everyone spreading the fear. What began as a few hundred euro grew to 50 million USD.
+The threats grew to not so casually mentioning a big private event the Ambassadors of the USA, UK, Japan, 400+ dignitaries and staff etc.. were slated to attend. If the money wasn’t paid up, the event would blow in more ways than one. During this time, the attackers took a particular and personal interest in the Ambassador’s Secretary, prompting the regular police to become involved for a split second. The regular police had no jurisdiction or authority in the matter and were warned to back off ASAP.
+Quietly and unbeknownst to the residents. The city was put on alert, embassies locked down, every person passing by was treated with suspicion. I even had the joy of not one, but three “Cultural Attachés” of an ISIS friendly embassy try to befriend me at a pub I frequented during the investigation. One gave me a very personal gift, a set of Islamic prayer beads. Which I had promptly checked for bugs. The trio didn’t drink alcohol but would sit patiently in the pub, drinking tea for hours until I arrived. The trio said they wanted English lessons, but all spoke English.
+Eventually I was able to gain the Ambassador’s trust to further interrogate some of the digital assets and accounts. This was quite unusual, I was not a citizen of the country in question. They allowed me to take back an asset to my lodgings. After getting comfortable, trying to relax, a glass of wine in hand. Eureka, I found it! The attackers still had access to the embassy email account because they had setup a back end email forwarder. Back end email forwarder closed, secured up the email account, gathered evidence. We then went on the hunt for who was behind the attack, hop by hop following each step back over multiple countries. The suspect(s) were isolated, placed under surveillance and effectively neutralized. Months later I was invited to a private embassy function. In the end, I was the only one blown away, by the Ambassador’s gift.
+
+Further investigations by JM Porup, reporter for CSO Online revealed the rootkit in the original report had been used by some nefarious groups. Possibly pointing to the suspected insider having outside help.
 
 
 ### Bio: <a name="Chris+Kubecka"></a>Chris Kubecka
@@ -67,6 +114,25 @@ In our talk, we will present new security tales and vulnerabilities of wireless 
 In 2016, we published the results of our research project "Of Mice and Keyboards: On the Security of Modern Wireless Desktop Sets" and publicly disclosed several security vulnerabilities in wireless desktop sets using AES encryption of different manufacturers. In the same year, Bastille Research independently published security vulnerabilities in wireless mice and keyboards of different manufacturers, too. As time went by, we have learned more about the (in)security of further wireless input devices like mice, keyboards, and presenters using different 2.4 GHz radio-based technologies, and want to share our experiences and gained knowledge concerning these devices.
 
 In our talk, we want to present answers to unanswered questions of our previous wireless desktop set research, raise the awareness of security issues and practical attacks against vulnerable wireless input devices, and tell some interesting tales.
+
+We will present different security vulnerabilities (e.g. insufficient protection of sensitive data, unencrypted communication, unauthenticated communication, keystroke injection) in different 2.4 GHz wireless input devices (e.g. keyboards, mice, wireless presenters) of different manufacturers (e.g. Microsoft, Logitech, 1byone, Fujitsu, Inateck, Targus) using different technologies (e.g. Bluetooth Classic, Bluetooth LE, Nordic Semiconductor Enhanced ShockBurst, Cypress WirelessUSB LP, other proprietary radio communication protocols), and talk about the way we found them.
+
+Concerning found Bluetooth security issues, we have published the following two papers last year but did not present this research results at a conference yet:
+
+* Case Study: Security of Modern Bluetooth Keyboards
+  https://www.syss.de/fileadmin/dokumente/Publikationen/2018/Security_of_Modern_Bluetooth_Keyboards.pdf
+
+* Rikki Don't Lose That Bluetooth Device
+   https://www.syss.de/fileadmin/dokumente/Publikationen/2018/Rikki_Dont_Lose_That_Bluetooth_Device.pdf
+
+Regarding our new research about non-bluetooth 2.4 GHz wireless input devices, our paper is still work-in-progress and will hopefully be published within the next couple of months. Different security advisories will also be published according to our responsible disclosure policy.
+
+One example concerning a keystroke injection attack against the AES-encrypted wireless keyboard Fujitsu LX901 is demonstrated in the following video:
+
+* SySS Proof-of-Concept Video: Fujitsu LX901 Keystroke Injection Attack
+   https://ptmd.sy.gs/videos/Fujitsu_LX901_Keystroke_Injection_Attack_PoC.mp4
+
+All in all, our talk "New Tales of Wireless Input Devices" will be quite similar to our talk "Of Mice and Keyboards: On the Security of Modern Wireless Desktop Sets" from 2016 (https://www.syss.de/fileadmin/dokumente/Publikationen/2016/2016_10_18_Of_Mice_and_Keyboards-Hack.lu_2016.pdf).
 
 
 ### Bio: <a name="Matthias+Deeg"></a>Matthias Deeg
@@ -92,10 +158,47 @@ cards or the security of wireless desktop sets. He is also author of the
 Mifare Classic Tool Android app.
 
 
+## <a name="Fingerpointing+False+Positives%3A+How+to+better+integrate+Continuous+Improvement+into+Security+Monitoring"></a>Fingerpointing False Positives: How to better integrate Continuous Improvement into Security Monitoring
+by Desiree Sacher
+
+This talk is about how you can make your Security Operation Center more efficient and give your bored-out analysts more purpose, by making a small change to your security monitoring process. With a potential huge change in your workflow, and improved results.
+
+The talk addresses the security monitoring resolution categories I created and documented in my taxonomy paper https://github.com/d3sre/Use_Case_Applicability. When working as an analyst in a Security Operation Center, most likely some duty will include security monitoring, depending on predefined use cases. Those use cases hopefully cover the relevant MITRE ATT&CK techniques, will most likely also cover more regulatory controls like the NIST 800-53 controls, but most definitely there will be false positives more than you like. The resolution categories help in refocusing the attention of the analyst to the "actual" cause of the alert. By tracking this in a seperate taxonomy, reports and statistics can point to company internal process problems or otherwise reflect the efficiency of the SOC. This is especially important when a SOC can't directly control all the configurations of it's log submitting devices. 
+The talk will present the categories, the idea and goal behind this suggested solution and show ways on how reports can afterwards be interpreted.
+
+
+### Bio: <a name="Desiree+Sacher"></a>Desiree Sacher
+
+Desiree is a Security Architect for a Security Operation Center in the financial industry. But through her career she worked in engineering positions for different security products, until in 2014 she finally became a Security Analyst. She now draws all of her experience from these jobs and her connection into the Infosec scene into creating efficient SOCs. Desiree is also a certified GCIA Forensic Analyst, Network Forensic and Cyber Threat Intelligence Analyst.
+
+
 ## <a name="Sensor+%26+Logic+Attack+Surface+of+Driverless+Vehicles"></a>Sensor & Logic Attack Surface of Driverless Vehicles
 by Zoz
 
 Networked and connected vehicles have the same network attack surface as other IoT devices, but are also heavily reliant on sensor inputs and the need for split second decision making under uncertain conditions, making them suffer a unique set of vulnerabilities even when network attacks are discounted. In this session the state of automated vehicle technology will be presented with a focus on the attack surface presented by vehicles' sensor and control logic suites, and the potential failure modes that could be exploited by malicious hackers and criminals.
+
+The talk will begin with an introduction to autonomous, unmanned and driverless systems, and the history thereof which most people are far from aware of.  Many people, even the technically inclined, are not familiar with the history of even driverless cars, and think it is largely a new development.  The talk will provide interesting history to correct this, then will briefly cover the current state of unmanned systems across the various domains (land/sea/air).
+
+After this brief historical summary the talk will move into general failure modes, including some high profile incidents and lessons that can be learned from them.  One major case study from each of the unmanned aviation and driverless car space.
+
+This is followed by a systems engineering level overview of the various subsystems that make up an autonomous system, from low level control laws to high level autonomy, what hardware and software is responsible for each, and where designers are most likely to introduce bugs.
+
+After this there will be a comprehensive overview of the sensors that are used in unmanned vehicles: the type, cost, manner of working and most importantly, how they can be deliberately caused to fail.  This is backed up with real examples from the presenter's experience and from current published research efforts.  I also intend to cover proposed "unhackable" sensor upgrades.
+
+I will cover denial and spoofing attacks on:
+- GPS
+- LIDAR
+- Vision cameras/Tesla autopilot
+- Millimeter wave radar
+- Ultrasonic transducers
+- Digital compass
+- IMU
+- Wheel encoders
+- Ground-penetrating radar
+
+Next are attacks on the high level autonomy modules and ways to produce unexpected and undefined behaviors from the overall system.  This will give attendees a good idea of serious problems that have yet to be solved in the space.  These are NOT unserious thought experiments like the trolley problem, these are real problems that the leaders in driverless car testing are struggling with.
+
+If there is time, finally, because many of these fully driverless systems may take longer to roll out than some expect, the talk will cover driver assist and safety assist modes that are already showing up in production vehicles or planned to be rolled out at the regulatory level over the next few years.  Most importantly, the US DOT specs for V2V and V2I communications that have been recently released, and placing them in the context of recent hacks on "smart infrastructure" components such as connected traffic systems.  Most likely there will not be time for this though, I have enough sensor hack info alone to fill the 45 minutes.
 
 
 ### Bio: <a name="Zoz"></a>Zoz
@@ -114,6 +217,8 @@ by Trammell Hudson
 spispy is an open source hardware tool for emulating SPI flash chips that makes firmware development and boot security research easier. In this talk we'll discuss the challenges of interfacing on the SPI bus and emulating SPI devices, as well as demonstrate how to use it quickly debug issues with coreboot and how we used spispy to discover a critical class of TOCTOU vulnerabilities in secure boot systems like Intel BootGuard.
 
 
+
+
 ### Bio: <a name="Trammell+Hudson"></a>Trammell Hudson
 
 I like to take things apart. https://trmm.net/
@@ -130,10 +235,101 @@ But it doesn't end here. While digging into our camera, we found a reliable way 
 
 This is the first vulnerability research on the Picture Transfer Protocol, a vendor agnostic logical layer that is common to all modern-day cameras. As DSLR cameras are used by consumers and journalists alike, this opens up the door for future research on these sensitive embedded devices.
 
+Outline:
+----------
+- Who am I?
+- Motivation
+  * People really care about their DSLR cameras
+  * Would they pay to get it back?
+- PTP 101
+  * Picture Transfer Protocol
+  * Does much more than just copying pictures
+  * Works over USB and over Wifi
+- Introducing our target:
+  * Canon DSLR cameras
+  * Modding a camera - Magic Lantern
+- Getting the firmware
+  * Firmware update is encrypted
+  * ML has a ROM Dumper
+- Starting the RE
+  * DryOS RTOS
+  * PTP uses unique constants, how nice of it
+- Finding Vulnerabilities
+  * ~150 PTP commands
+  * found 5 different 0-Days just in this layer
+- Exploiting the vulnerabilities
+  * Blind Sleep-based debugging didn't work
+  * The camera fights back
+  * Err 70
+  * Blind Crash-based exploit development 
+- Writing a ransomware
+  * Scout Debugger
+  * We need some crypto
+  * Firmware update has crypto
+- Firmware update
+  * Symmetric crypto ?!
+  * Extracting the keys
+  * Asking the camera to sign our firmware update
+- Win!
+  * Live-Demo of our exploit + Ransomware
+  * Bonus: PoC of our own firmware update
+- Conclusions
+  * Obscurity != Security
+  * Don't invent your own crypto
+
 
 ### Bio: <a name="Eyal+Itkin"></a>Eyal Itkin
 
 Eyal Itkin is a vulnerability researcher in the Malware and Vulnerability Research group at Check Point Software Technologies. Eyal has an extensive background in security research, that includes years of experience in embedded network devices and protocols, bug bounties from all popular interpreter languages, and an award by Microsoft for his CFG enhancement white paper. When not breaking RDP or FAX, he loves bouldering, swimming, and thinking about the next target for his research.
+
+
+## <a name="DeTT%26CT%3A+Mapping+your+Blue+Team+to+MITRE+ATT%26CK"></a>DeTT&CT: Mapping your Blue Team to MITRE ATT&CK
+by Marcus Bakker, Ruben Bouman
+
+Within blue teams, it is crucial to have sufficient and adequate information on several aspects to prioritise your defence efforts. Important aspects are: visibility (indicate if you have sufficient data sources to be able to see traces of attack techniques), detection (how good are you in detecting attackers) and threat actor behaviours (to determine which attack behaviours are essential for your organisation to defend against). 
+
+Obtaining and administrating this information can be a challenge. In this talk we present the DeTT&CT framework, build atop of MITRE ATT&CK, that helps blue teams to gain insight into these aspects and to start prioritising their defence efforts. The ultimate goal of DeTT&CT is to become more resilient against attacks targeting your organisation.
+
+1. Introduction
+We start with a short introduction on what we will present and who we are.    
+
+2. Getting everybody on the same level – MITRE ATT&CK™
+Within the talk ATT&CK is a key concept. It is therefore essential that we introduce ATT&CK to the audience.
+
+3. Problem statement – where to start hunting?
+While performing threat hunting, we encountered multiple challenges in prioritising our hunting investigations. The first questions we asked ourselves: how good is our visibility to find certain attacker behaviours in our logs? Which attack techniques are we already able to detect and how good is that detection? To conclude with the question: which attack techniques are the most relevant to our organisation based on threat intelligence?
+
+4. Solving the problem – DeTT&CT framework
+DeTT&CT is a framework built atop of ATT&CK to help you with the following: scoring the quality of your data sources, getting insight into your visibility, get to know your detection coverage and threat actor behaviours relevant for your organisation. All the information on these aspects can be administrated in the DeTT&CT framework.
+
+The main goal of this part of the talk is to provide general information on DeTT&CT that is necessary for the upcoming slides.
+
+5. DeTT&CT - data sources
+We will cover important dimensions of data quality concerning the data sources that are listed in ATT&CK. We then proceed to explain how these data sources are used to automate your visibility coverage on ATT&CK techniques. 
+
+6. DeTT&CT - visibility
+Getting an automated overview of your visibility has some difficulties that we tackle within the DeTT&CT framework. We explain our methodology on how to approach this the most effectively.
+
+7. DeTT&CT - detection coverage
+Another core aspect is knowing your detections and how well or poorly they perform. We explain how we approach this in DeTT&CT and which important nuances should be taken into account (not every ATT&CK technique can be a candidate for detection and not every attack technique is part of ATT&CK).
+
+8. DeTT&CT - threat actor behaviours
+We share several approaches on how to use DeTT&CT in mapping threat actor behaviours to the ATT&CK matrix. DeTT&CT can make use of information on threat actor behaviours available in ATT&CK, and it is also possible to load your own intelligence. We will explain how to administrate and use this within the DeTT&CT framework.
+
+9. Problem solved - prioritise to improve your defences
+All the information on previously mentioned aspects can be combined to allow the prioritisation of your hunting, and other defence efforts, based on gaps in the ATT&CK Matrix linked to threat actor behaviours.
+
+10. Questions?
+
+
+### Bio: <a name="Marcus+Bakker"></a>Marcus Bakker
+
+Marcus Bakker is a passionate IT Security professional with over eight years of experience in offensive IT Security and Cyber Defence. Marcus is the co-creator of the DeTT&CT framework and co-author of the TaHiTI threat hunting methodology.
+
+
+### Bio: <a name="Ruben+Bouman"></a>Ruben Bouman
+
+Ruben Bouman is an IT Security professional and co-owner of Sirius Security. He has been working for several organisations in the Dutch financial sector for over twelve years and is experienced in cyber defence and incident response. Ruben is the co-creator of the DeTT&CT framework.
 
 
 ## <a name="DOS+Software+Security%3A+Is+there+Anyone+Left+to+Patch+a+25-year+old+Vulnerability%3F"></a>DOS Software Security: Is there Anyone Left to Patch a 25-year old Vulnerability?
@@ -160,6 +356,8 @@ describe how software vendor are (or not) patching such vulnerabilities
 in DOS applications they still sell today.
 
 
+
+
 ### Bio: <a name="Alexandre+Bartel"></a>Alexandre Bartel
 
 Alexandre Bartel is a research associate in software engineering at the University of Luxembourg in the Interdisciplinary Centre for Security, Reliability and Trust's Serval Team. His research is in the area of software engineering and computer security.
@@ -171,6 +369,8 @@ by Eve Matringe
 The Article 215 of the Treaty on the Functioning of the European Union allows the Council to adopt restrictive measures against natural or legal persons and groups or non-State entities in some specific cases. This Regulation applies to cyber-attacks with a significant effect, including attempted cyber-attacks with
 a potentially significant effect, which constitute an external threat to the Union or its Member States. 
 What measures can be adopted, according to what procedure and under what conditions, against whom and what remedies are available.
+
+Europa is now NSA&russian-cyberbullet-proof.
 
 
 ### Bio: <a name="Eve+Matringe"></a>Eve Matringe
@@ -186,12 +386,125 @@ Detecting adversaries is not always easy. Especially when it comes to correlatin
 
 Join me to find out how to match Windows Event Log IDs with the MITRE ATT&CK framework and methods to simplify the detection in your environment.
 
+I will present my OpenSource EventList tool with which one is able to:
+- Import either MSFT Baselines or custom GPOs
+- Find out immediately which Events are being generated and what MITRE ATT&CK techniques are being covered by the selected Baseline/GPO
+- Choose MITRE ATT&CK techniques and generate GPOs to generate the events needed for detection
+- Generate Agent Forwarder Configs to only cover the events needed for the detection (avoid being "Log spammed")
+- Generate Queries to detect the chosen MITRE ATT&CK techniques, regardless of the SIEM solution used
+
 
 ### Bio: <a name="Miriam+Wiesner"></a>Miriam Wiesner
 
 Miriam Wiesner works as a Program Manager for Microsoft Defender ATP. Besides MDATP, she has a focus on Secure Infrastructure, Windows Event Logs, Active Directory Security, Just Enough Administration & PowerShell and many more.
 In her spare time, she enjoys writing articles for her private blog also as developing tools to help the community and speaks on international conferences and events.
 She’s a life-long learner, always excited about new technologies and empowering others.
+
+
+## <a name="Disturbance%3A+on+the+Sorry+State+of+Cybersecurity+and+Potential+Cures"></a>Disturbance: on the Sorry State of Cybersecurity and Potential Cures
+by Saad Kadhi
+
+Infosec research, good and bad, abounds, like almost everything else in this ‘infobese’ era. Cybersecurity conferences are filled with presentations exposing new vulnerabilities, as if we didn’t have enough of those already, describing best practices or showcasing tools and techniques. That is fine, as long as we keep the end goal in plain sight: protecting the digital realm.
+
+In this blockchain-free talk, we’ll compare past, current and possible future trends of the threat landscape and attempt to demonstrate why, with all our goodwill and altruism, educational and mentoring programs, the sorry state of cybersecurity is here to stay unless we take a step back. It’s hard and yet necessary to question ourselves, to reframe and rephrase the messages that we keep conveying for the last twenty years, and stop the long shoulder-patting tradition. If we really care about cybersecurity, it’s time we address the core problems from a different perspective, one that requires hardship, courage and patience, one that places the audience at the centre, armed with a profit carrot in one hand and a liability stick in the other.
+
+In a seminal talk titled ‘You and your research’, given at Brucon in 2011, Haroon Meer, a well known and respected security researcher, found out that there were more cybersecurity conferences than days in a year. During the same conference, Alex Hutton delivered a wonderful keynote about why information risk management Is failing and offered solutions to address this significant problem. And these are just two examples of cybersecurity folks talking to other cybersecurity folks, on and on and on, in an honest attempt to protect the digital realm, if not cure once and for all its ailments.
+
+Since then, APT emerged and kept refining their craftsmanship and some run-of-the-mill cybercriminal groups reached a chilling level of proficiency. Cybersecurity conferences and training multiplied and the demand for skilled infosec professionals exploded. And the complexity of IT grew and with it the attack surface.
+
+Yet, for somebody who worked long enough in this field, it feels like cleaning an ever-expanding mess, armed with a teaspoon, while a burnout is lurking in the shadows. So what our core problems besides a substantial part of an industry which keeps pushing semi-magical solutions, lured by the promises for easy money? Why it seems that we aren’t making any true progress? Is it the lack of regulations and policies? Lack of sharing? Or is it an issue of liability and an economic system that is running amok?
+
+
+### Bio: <a name="Saad+Kadhi"></a>Saad Kadhi
+
+With more than 20 years of experience in operational cybersecurity, Saâd is the head of CERT-EU and the leader of TheHive Project. He devoted the last eleven years of his professional life to incident response, digital forensics and what the cool kids call now cyber threat intelligence. Before joining CERT-EU, he built a CSIRT for a large multinational company, worked at CERT Société Générale and created CERT-BDF, the cyberdefence team of Banque de France, the French national central bank. A convinced retromodernist with a knack for individualistic altruism, he gave trainings, workshops and spoke at conferences such as Hack.lu, the FIRST conference, BSides Lisbon and NorthSec. He is also one of the organisers of the Botconf conference.
+
+
+## <a name="Kill+MD5+-+demystifying+hash+collisions"></a>Kill MD5 - demystifying hash collisions
+by Ange Albertini
+
+Understanding the impact of hash collisions without a PhD in crypto.
+Showing how vulnerable MD5 can be.
+
+
+
+
+### Bio: <a name="Ange+Albertini"></a>Ange Albertini
+
+File formats enthusiast.
+
+
+## <a name="Smartphone+apps%3A+let%27s+talk+about+privacy"></a>Smartphone apps: let's talk about privacy
+by Axelle Apvrille
+
+Smartphone applications do not respect your privacy.
+If you are at Hack.Lu, you probably more or less already know this.
+In the best cases, you found a few solutions to minimize the issue.
+Or you surrendered (what can we do about it, huh?).
+
+But are you really aware of the *extent* of the problem? Is it only your IMEI and your location that leak?
+Are there are still private apps out there?
+Jump in for some Android disassembly, logs and Frida hooks.
+
+I am a malware researcher. So, every day, I disassemble Android apps, and decide whether they are benign or malicious. We can't expect privacy from malware, can we? But actually, nearly all so-called benign applications I look into are *far from private*.
+
+It is time we discuss this seriously in a conference. I want to show you the extent of garbage-ware we find in our smartphone's apps. Adkits are big issue, of course. There are hundreds. But there are not the only ones. There are also analytics, crash reporting, IO analyzers, affiliate SDKs, cross platform gaming frameworks...
+
+Sometimes, privacy issues are blatant. Very often though, they are more insidious: e.g. reports are anonymized, but the level of details is a concern. We show issues in common genuine apps we use every day. People who use Facebook, Messenger etc usually know they face a few privacy issues. How about medical applications? games? Why do simple applications weigh 30MB for tasks they could do in less than 2? Are there still private apps out there?
+
+Let's look inside our smartphones.
+
+
+### Bio: <a name="Axelle+Apvrille"></a>Axelle Apvrille
+
+Axelle Apvrille is principal security researcher at Fortinet. She specifically looks into mobile malware and smart devices (not always that smart...). She is the lead organizer of Ph0wn CTF, a Capture The Flag dedicated to smart devices.
+
+
+## <a name="The+Red+Square+-+Mapping+the+connections+inside+Russia%27s+APT+Ecosystem"></a>The Red Square - Mapping the connections inside Russia's APT Ecosystem
+by Itay Cohen, Ari Eitan
+
+If the names Turla, Sofacy, and APT29 strike fear into your heart, you are not alone. These are known to be some of the most advanced, sophisticated and notorious APT groups out there -- and not in vain. These Russian-attributed actors are part of a bigger picture in which Russia is one of the strongest powers in the cyberwarfare today. Their advanced tools, unique approaches, and solid infrastructures suggest an enormous and complicated operation that involves different military and government entities inside Russia. 
+
+That said, and with all the available information on these groups, there are still some questions to bear in mind: Are the different government entities working alone or are they sharing code and techniques with each other? What artifacts, libraries and code are more likely to be shared between different families and teams of the same actor? 
+
+The fog behind these complicated operations made us realize that while we know a lot about single actors, we are short of seeing the bigger picture - a whole ecosystem with actor interaction (or lack thereof) and particular TTPs that can be viewed in a larger scope. We decided to know more and to look at things from a broader perspective. This led us to gather, classify and analyze thousands of Russian APT malware samples in order to find connections - not only between samples, but also between different families and actors. 
+
+In this talk, we will describe the process of our research. Namely, we will show how the technologies at our disposal allowed us to take a deep dive into these malware's binary DNA in order to spot the mutual Genes that are shared between Russia's APT families and actors. We will show interesting connections that we found, and present the interactive map we created to visualize this complicated Russian APT ecosystem. We will also release a signature-based tool to detect old and new samples based on the popular mutual Genes we found.
+
+Outline:
+--------
+ - About us
+ - Objectives and Motivation
+ - Presenting the main Russian APT Groups
+   - in addition to worth-mention incidents
+ - The Technology
+   - allows us to detect even the smallest fragments of code similarities between files
+ - The Process   
+   - gathering samples attributed to Russia
+   - classifying the samples to families and actors
+   - Analyzing the data
+ - Spotting interesting connections
+ - Present the found connections between different families and actors
+   - Code similarities - Assembly level
+   - Mutual TTPs
+   - other connections
+ - Release two tools for the community
+   - A visual and interactive map of the connections between the dozens of the families
+   - A signature-based tool to detect old and new samples based on popular mutual "Genes" in the ecosystem
+ 	- Including a dedicated ruleset to be shared with the community
+ - Insights and Conclusion
+
+
+### Bio: <a name="Itay+Cohen"></a>Itay Cohen
+
+Itay Cohen (aka Megabeets) is a Security Researcher and a Reverse Engineer in the Malware and Vulnerability Research group at Check Point. Itay has years of extensive background in malware reverse engineering and many other security-related topics. He is the author of https://megabeets.net, a security blog focused on making advanced security topics accessible for free.
+
+On his free time, Itay loves to participate in CTF competitions and to contribute to open-source projects. He is a core developer of the open-source reverse engineering framework radare2 and the maintainer of Cutter, radare2's official GUI.
+
+
+### Bio: <a name="Ari+Eitan"></a>Ari Eitan
+
+Ari Eitan is the VP Research of Intezer Labs, a security researcher and Incident Response professional. Ari served as the head of IDF Incident Response team and has vast experience in dealing with Nation-sponsored cyber attacks, specializing in Malware Analysis, Reverse Engineering and Forensics. He has spoken at a variety of security conferences and trainings, including the first BsidesTLV, Kaspersky SAS, and for government organizations and international agencies.
 
 
 ## <a name="Mr."></a>Mr.
@@ -205,10 +518,65 @@ This activity got the name #FuckResponsibleDisclosure (#FRD)
 My talk is a historical retrospective of #FRD: when and how it started, what emotions it caused in Ukraine, how officials and resources’ owner communicated with hacktivists and others. How #FRD influenced on national cyber security and what local Cybersec-community thinks on #FRD.
 The preso contains plenty of expressive screenshots.
 
+I researched #FRD as a unique activity in modern cybersecurity world.
+The main goal of #FRD is to increase of cybersecurity of Ukraine. 
+However Ukrainian cyber activists used controversial methods to get this goal publishing indicators of low level of cyber protection in Governmental institutions and critical infrastructure objects.
+What was right/wrong in #FRD and how it influenced on national cybersecurity?
+This is the matter of the research.
+
 
 ### Bio: <a name="Kostiantyn+Korsun"></a>Kostiantyn Korsun
 
 As former deputy head of Cybercrime Division at Security Service of Ukraine (colonel ret.), Kostyantyn Korsun was one of the founders and the first head of CERT-UA. After resigning from the service, Kos acted as Regional Director for Ukraine Research Office of iSIGHT Partners, international cyber threat intelligence company. Then he cooperated with Symantec Corp. as an official vendor of Threat Intelligence service. Currently a CEO and Co-Founder of Berezhs Security LLC., a company that provides services in Penetration Testing, Security Awareness Programs, Software Security Assessment, Bug Bounty Program, Social Engineering Assessment, Application Security Programs. Mr. Korsun is an active member of the local cyber community in Ukraine promoting cybersecurity ideas within Ukrainian society.
+
+
+## <a name="Memory+forensics+analysis+of+Cisco+IOS+XR+32+bits+routers+with+%27Amnesic-Sherpa%27"></a>Memory forensics analysis of Cisco IOS XR 32 bits routers with 'Amnesic-Sherpa'
+by Solal jacob
+
+Nowadays attackers are targeting not only computers but also core network equipment like routers by using memory-only attacks that are difficult to detect as the firmware image is not modified. In order to determine if a router was compromised by a memory-only attack, we need to be able to perform forensics analysis on it, but this requires specialized tools. This presentation is about CISCO IOS XR router forensics. We will explain how work the internal of a CISCO IOS XR 32 bits, router running under the QNX operating system. And, as no tool currently exists to analyze CISCO IOS XR routers, we developed a router forensics framework called 'Amnesic-Sherpa', aimed at analyzing memory dump, that can be used to know if a router was compromised. This framework will be released as open-source.
+
+This presentation will be divided in different parts:
+
+The first part gives the necessary background: the context and the wide number of OSes in routers. We also describe the architecture of QNX, the microkernel running on IOS XR-32, and how it works: the startup
+process, how the firmware is packed, the file systems in the firmware images, and the specific communication system between the processes.
+
+Then, we will explain how we developed a specific memory acquisition tool and an analysis framework call 'Amnesic-Sherpa', aim at analyze those routers.
+
+The tool first looks for all the interesting structures and information that can be present in an IOS XR memory dump, then tries to re-create the memory structures present in different parts of the microkernel memory at the moment of the dump, and extracts all available information. The tool then let the user inspects theses structures to find traces of compromise or anomalies.
+
+In the last part, we verify the detection capabilities of our framework by manually modifying processes to simulate a memory attack. We then demonstrate how to use 'Amnesic-Sherpa' (and third party tools) to detect this attack and how the detection process could be automated.
+
+
+### Bio: <a name="Solal+jacob"></a>Solal jacob
+
+Solal is currently a researcher at the LED (research and Exploration in intrusion Detection Laboratory) at the ANSSI (French National Network & Cybersecurity agency), where he work on finding new ways to detect attacks. Before that Solal worked 10 years at ArxSys a company he founded, where he was core developer of DFF , an open-source digital forensics framework. He also conduct forensics investigation, do incident response missions, and trained people on these subjects.
+
+
+## <a name="Leveraging+KVM+as+a+debugging+platform"></a>Leveraging KVM as a debugging platform
+by Mathieu
+
+Virtual Machine Introspection keeps opening new possibilities to interact with Virtual Machines, from sandboxing (VMRay), to cloud monitoring solutions (BitDefender HVI).
+
+Our debuggers needs to benefit from this approach too, and so far we have seen multiple open source projects trying to leverage the hypervisor as a new debugging platform.
+However, most of these solutions are tied to one hypervisor.
+
+The VMI ecosystem can only grow if it can bring all developers under the same roof, and provide the core libraries that will be the foundation for all VMI applications.
+
+Keeping this vision in mind, pyvmidbg is a GDB stub built on top of LibVMI, a hypervisor-agnostic VMI library.
+It can introspect Windows VMs and explore the execution context, as well as intercepting the entrypoint of new processes, making it suited for malware analysis and reverse-engineering.
+
+One of the goals of pyvmidbg is to attract developers and potential users by witing the missing layers that prevent VMI from gaining a wider adoption as of today.
+
+The lack of VMI APIs available on KVM has made of LibVMI a Xen centric library, despite its flexible architecture. 
+
+This talk will demonstrate the efforts of porting pyvmidbg to KVM and the state of the LibVMI KVM driver.
+
+
+
+
+### Bio: <a name="Mathieu"></a>Mathieu
+
+TODO
 
 
 ## <a name="Exploiting+bug+report+systems+in+the+game+industry"></a>Exploiting bug report systems in the game industry
@@ -217,6 +585,8 @@ by Andreia Gaita
 In the world of development, what do you do when you run into a bug in the library, framework, or middleware you're using? You submit a bug report and describe the steps. The companies providing you with the software expect and encourage you to send in repro code, but the bigger the system, the more complex the code needs to be to reproduce the problem. In the case of game development, the expectation is that when you find a bug, you submit a complete test project that exemplifies the problem, so that test teams can reproduce it. What can these test projects contain? How are they tested by companies developing game engines and middleware? What potential exploitation venues does this open?
 
 There are unique conditions in the game industry that make it particularly vulnerable to certain types of attacks, but its uniqueness also makes it somewhat of a puzzle to the rest of the tech industry. In this talk, we'll go through some of the particulars of how game development works, and how these practices and bug reporting systems can be exploited to gain access to the core of development teams across the game industry.
+
+
 
 
 ### Bio: <a name="Andreia+Gaita"></a>Andreia Gaita
@@ -232,6 +602,8 @@ Microsoft has slowly been introducing tools to help organisations better manage 
 For Forensics and even Incident Response, these tools are now a go to built-in option to bootstrap and drive the forensics process including opening access to artefacts that overzealous user or even a “smart” attacker has removed. SRUM for instance can provide data points ranging from network to process activitiy providing insight into what, who, when and how an attacker or malicious process introduced itself into the environment. 
 
 This talk will help the participant build the foundations to identify which built in tools can assist in the Windows Forensics process and the data points that are available as well as examine how services such as SRUM can be used to extract key data points to provide information for incident response or threat hunting activities.
+
+
 
 
 ### Bio: <a name="Thomas+Fischer"></a>Thomas Fischer
@@ -260,6 +632,8 @@ Bluetooth Low energy version 5 has been published in late 2016, but we still hav
   to our fellow IoT hacker family.
 
 
+
+
 ### Bio: <a name="Damien+Cauquil"></a>Damien Cauquil
 
 Damien is a senior security researcher who joined Digital Security in 2015 as head of research and development. He discovered how wireless protocols can be fun to hack and quickly developed BtleJuice, one of the first Bluetooth Low Energy MitM framework, and BtleJack, a BLE swiss-army knife released in 2018.
@@ -271,6 +645,12 @@ Damien is a senior security researcher who joined Digital Security in 2015 as he
 by Alyssa Herrera
 
 I demonstrate a successful attack on a cloud-based US Defense website, gaining access to a sensitive internal network, enumeration of internal services, out of bands data leakage and attack vectors unique to cloud architecture. Additionally I will discuss mitigation points for server side request forgery, how this type of vulnerability can manifest, what this type of attack is, and how I'm able to legally hack the Department Of U.S Defense.
+
+Server-side request forgery (SSRF) attacks abuse poorly secured requests made on the server-side; these requests appear in many circumstances, from getting a user's avatar to pinging a third-party webhook. SSRF attacks hijack these HTTP requests, allowing an attacker to exploit the application to route URL/IP requests and subsequently probe or access sensitive networks.
+
+Unsurprisingly, this can lead to serious breaches of security: exfiltration of secret keys, spoofing of email, and, ultimately, an entry point into an otherwise secure system. On cloud systems, SSRF gives the attacker a way to query for metadata which can reveal security credentials, or access tokens to the instance. Different cloud providers offer different safeguards; likewise they may make the threat far less clear than others do!
+
+In this case study, I'll describe how, as part of a recent U.S. Department of Defense vulnerability disclosure program, I gained access to the Non-Classified Internet Protocol Router Network (NIPRNET). We'll look at the SSRF techniques that I used to access AWS metadata and reveal sensitive information about cloud instances. I'll also talk about some techniques for protection against SSRF - input validation, compartmentalized services, access control, and security policies.
 
 
 ### Bio: <a name="Alyssa+Herrera"></a>Alyssa Herrera
@@ -478,6 +858,8 @@ There are different tools out there, which might help you in monitoring your con
 Micro-services are the future they say. Sure thing for cyber-criminals ! As those technologies will be more and more used and most probably in the cloud, SOC teams need to start worrying about the potential impact and how to face those new threats. It will take time. Oh and we did not spoke about serverless services like AWS Lambda ...
 
 
+
+
 ### Bio: <a name="Emilien"></a>Emilien
 
 Emilien Le Jamtel is a French security analyst, versatile member of CERT-EU since 4 years. With a strong background in offense, he is now playing defense as responsible for the monitoring and threat hunting activities in CERT-EU. In both professional and personal life, he is fond of games and difficult challenges and he probably forgot to answer your emails.
@@ -496,6 +878,11 @@ Cisco Talos identified malicious actors targeting the DNS protocol successfully 
 The first one developed a piece of malware, named DNSpionage, targeting several government agencies in the Middle East, as well as an airline. During the research process for DNSpionage, we also discovered an effort to redirect DNSs from the targets and discovered some registered SSL certificates for them. We identified multiple countries targeted by this redirection. On 22 January 2019, the US DHS published a directive concerning this attack vector. In this presentation, we will present the timeline for these events and their technical details. 
 
 The second actor is behind the campaign we named “Sea Turtle”. This actor is more advanced and more aggressive than the previous one. They do not hesitate to target directly registrars and one registry. The talk will present the 2 actors and the methodology used to target the victims.
+
+This talk will include:
+  - DNS presentation because few ppl mix register, registrar, registrant
+  -  the oilrig leak on the similarities between DNSpionage and the technical details in the leak.
+  - unpublished DNS hijack if the investigation is finished by the conference.
 
 
 ### Bio: <a name="Rascagneres+Paul"></a>Rascagneres Paul
@@ -516,6 +903,8 @@ by Sebastien Tricaud
 Faup is an opensource tool which allows to work with URLs. Mainly parsing, but also, browser emulation and investigation. This workshop will teach the audience how to use Faup, its library, and write modules to do nifty hacks with URLs.
 
 
+
+
 ### Bio: <a name="Sebastien+Tricaud"></a>Sebastien Tricaud
 
 Lead developer of Faup and other opensource tools.
@@ -527,6 +916,8 @@ by Stijn Tomme
 Open the safe and get cured.
 From manufacturing your network cable to determining the code… and getting the anti-virus
 
+In a 90 minute workshop a team of max. 4 persons can enter the room. During the first 15 minutes they will receive a briefing on the mission. The room has been contaminated by a foreign virus. Hopefully the group can work together and get the “cure” that is locked in the safe. Every team gets 3 attempts to “try” a code. After 60 minutes the mission is over.
+
 
 ### Bio: <a name="Stijn+Tomme"></a>Stijn Tomme
 
@@ -537,6 +928,22 @@ From manufacturing your network cable to determining the code… and getting the
 by David Szili
 
 This workshop will introduce osquery to the participants, starting with the capabilities of the tool, how to configure it and use extensions and how to perform fleet management to scale the solution for enterprise environments.
+
+Maintaining real-time insight into the current state of your endpoint infrastructure is crucial.  It is very important from operational, continuous security monitoring, and incident response perspective.  Created by Facebook in 2014, osquery is an open-source instrumentation framework for Windows, OS X (macOS), Linux, and FreeBSD operating systems.  
+
+Osquery exposes the operating system as a relational database and allows you to write SQL queries to explore system data.  The generic SQL tables represent running processes, loaded kernel modules, open network connections, browser plugins, hardware events, file hashes, etc.  These SQL tables are implemented via an easy to extend API and several tables already exist and more are being written.  The main advantage of osquery is that it allows you to use one platform for monitoring complex operating system state across an entire infrastructure.  It has a high-performance and low-footprint distributed host monitoring daemon, osquery and also an interactive query console, called osqueryi.
+
+During this two-hour workshop, we will learn about osquery's capabilities and cover the following topics:
+- Osquery basics (installation, osqueryi, osqueryd, osquery schema);
+- SQL refresher (SELECT, FROM, WHERE, LIKE, JOIN, etc.);
+- Osquery configuration (flagfile, scheduled queries, packs, logging, file integrity monitoring, etc.);
+- Osquery extensions;
+- Fleet management (Kolide Fleet, Doorman, SGT, etc.);
+- Integration with log aggregation platforms (Elastic Stack).
+
+Technical requirements for the workshop:
+- A laptop with at least 8 GB of RAM and 30-50 GB of free disk space;
+- VMware Workstation, VMware Fusion or VMware Player installed.
 
 
 ### Bio: <a name="David+Szili"></a>David Szili
@@ -554,6 +961,8 @@ As Hack.lu is the biggest and most established technical information security co
 This is why we decided to give the opportunity to companies looking for such profiles to get in touch with them during the conference.
 
 
+
+
 ### Bio: <a name="Hack.lu"></a>Hack.lu
 
 
@@ -565,6 +974,14 @@ by Didier Stevens
 Rich Text Format (RTF) documents are consumed by many applications, like Microsoft Word.
 
 Malicious RTF documents contain exploits or embedded objects/links: in this workshop, we go through 20+ exercises to learn how to analyze these documents with Didier's tool rtfdump.py.
+
+Rich Text Format (RTF) documents are also used to deliver a malicious payload. Unlike Word documents, they can not contain VBA macros. To achieve code execution, malware authors have to exploit vulnerabilities, or social engineer the recipient into executing an embedded payload. 
+
+Microsoft Equation Editor vulnerabilities are being widely exploited, and this is reflected in the increased popularity of the RTF format with malware authors. 
+
+The RTF format also lends itself to many obfuscation tricks, making the task of the analyst much harder. 
+
+In this workshop, Didier Stevens will teach you analysis of malicious RTF documents in his typical workshop style: this means hands-on, many exercises, and just a few slides.
 
 
 ### Bio: <a name="Didier+Stevens"></a>Didier Stevens
@@ -580,6 +997,35 @@ by Thomas Patzke
 
 How to create Sigma rules and hunt evil in logs.
 
+Sigma is a generic signature format for description of interesting log events. It provides a
+structured format in which researchers and analysts can describe and share detection methods. Its
+[main repository](https://github.com/Neo23x0/sigma) contains:
+
+* a rule specification
+* an open repository for rules (currently 185)
+* a converter that generates queries for a wide range of SIEM systems
+
+Beside the open source repository, further services like a web editor for Sigma rules and other free
+and commercial repositories are evolving around Sigma.
+
+In this workshop, we will learn how to:
+
+* Write Sigma rules for log events of analysed threats
+* Generate queries for a supported SIEM and grep command lines with the open converter *sigmac*
+* Sharing Sigma rules with MISP
+* Using generic log sources to write portable rules
+* Using content modifiers for regular expressions, expression of obfuscation techniques and other advanced stuff.
+
+Further, we will explore the current and evolving ecosystem around Sigma.
+
+The following prerequisites are recommended for going through the hands-on excercises:
+
+* A Unix environment
+* Ability to run Docker containers from the Internet
+* Python >= 3.6 with dependencies from Sigma
+* The cloned Sigma workshop repository: https://github.com/thomaspatzke/sigma-workshop (pull updates short before workshop!)
+* A MISP instance that can be used for test events (I recommend MISP-dockerized from DCSO: https://github.com/DCSO/MISP-dockerized)
+
 
 ### Bio: <a name="Thomas+Patzke"></a>Thomas Patzke
 
@@ -590,6 +1036,25 @@ Thomas Patzke has more than 13 years of experience in the area of information se
 by Eva Szilagyi
 
 Context-dependent output encoding? Prepared statement with bind variables? Disable external entity resolution? Storing passwords in salted hash format?  If you are involved in Java development, come to my workshop and we will see together, why these are important from a security perspective!
+
+Context-dependent output encoding? Prepared statement with bind variables? Disable external entity resolution? Storing passwords in salted hash format?  If you are involved in Java development, come to my workshop and we will see together, why these are important from a security perspective!
+
+Most vulnerabilities can be prevented by following secure coding best practices from the beginning of the development. As opposed to common misbeliefs, this does not make development more complex or longer. Secure coding becomes more expensive when it is an afterthought and you try to retroactively apply it on a project.
+
+This workshop is meant for developers and security professionals alike. It is delivered by an information security professional with the purpose of demystifying web application secure coding.
+
+During this hands-on workshop, we are going to see not only how common web application vulnerabilities can be prevented, but also common mitigation mistakes and why they are inefficient. We are going to fix together real-life vulnerabilities included, but not limited to:
+- SQL injection (SQLi); 
+- XML injection (XXE); 
+- Cross-site scripting (XSS); 
+- Cross-site request forgery (CSRF);
+- Authentication and authorization issues.
+
+We are going to use Java, without putting too much emphasis on framework-specific aspects.
+
+Technical requirements for the workshop:
+- A laptop with at least 8 GB of RAM and 40-50 GB of free disk space.
+- VMware Workstation, VMware Fusion or VMware Player installed.
 
 
 ### Bio: <a name="Eva+Szilagyi"></a>Eva Szilagyi
@@ -604,6 +1069,30 @@ by Antonin Beaujeant
 
 This workshop will try to explain to you the most common vulnerabilities identified in binary applications, i.e. buffer overflow, use-after-free, format string and integer under/overflow.
 
+URL: https://beaujeant.gitbook.io/appsec101/
+
+What will this workshop teach you?
+
+* Understanding the structure and purpose of the CPU and the memory
+* Basics of C programming
+* Basics of assembly
+* Understanding and exploiting basic buffer overflow
+* Understanding and exploiting basic use-after-free vulnerability
+* Understanding and exploiting basic format string vulnerability
+* Understanding and exploiting basic integer overflow and underflow vulnerabilities
+
+What this course won’t teach you?
+
+* Reverse engineering
+* Coding in C or Assembly (although we will briefly cover both)
+* Explain, use and create fuzzers
+* Create your own shellcode
+
+Minimum requirements:
+
+* Being familiar with computer
+* Being able to read C code (or similar language)
+
 
 ### Bio: <a name="Antonin+Beaujeant"></a>Antonin Beaujeant
 
@@ -617,6 +1106,8 @@ To understand the extend of MD5 and SHA1 collision without the maths,
 to come up with your own collisions tricks to actually prove that MD5 shouldn't be used.
 
 
+
+
 ### Bio: <a name="Ange+Albertini"></a>Ange Albertini
 
 File formats enthusiast.
@@ -626,6 +1117,10 @@ File formats enthusiast.
 by Patrice Auffret
 
 When a company grows, it becomes difficult to track every Internet exposed assets. Especially nowadays, with the prevalence of shadow IT and shadow Cloud services. Bad guys know it too well, they have tools and do monitor your exposed infrasctructure. You should be the first to uncover a vulnerability or an exposure of sensitive asset before it is exploited for malevolent purposes.
+
+During the workshop, attendees will learn about the data collected by ONYPHE and how they can leverage its power to have a better view on their Internet exposed assets, especially when working in a big corporation. They will be able to deploy the presented scenarios on their own company to understand their exposure.
+
+They will also learn to use the ONYPHE API to poll data and fill an Elasticsearch database and use Kibana to create powerful dashboards to show to their management. We will give them a free 1-month Entreprise subscription.
 
 
 ### Bio: <a name="Patrice+Auffret"></a>Patrice Auffret
@@ -637,6 +1132,16 @@ Patrice Auffret (AKA GomoR) is a senior security expert specialized in network p
 by Benoit Sevens
 
 In this workshop we will apply the Time Travel Debugging feature of WinDbg, one of the most powerful Windows debuggers, to the field of malware analysis. We will show with concrete examples how this technology can be very effective in reversing complex samples in a timely manner.
+
+Microsoft added Time Travel Debugging to their powerful WinDbg debugger in 2017. This feature is a gift for reverse engineers working in all sort of fields and is clearly gaining in popularity. The most obvious area that benefits from reverse debugging is the one of root cause analysis during vulnerability research. Multiple blog posts and demonstrations have proven this.
+
+However, other fields of reverse engeering can also greatly benefit from this innovation. This workshop will take a look at how we can leverage Time Travel Debugging for efficiently unpacking a complex, multilayered malware sample and solving common malware analysis problems in an alternative manner. 
+
+The intended audience for this workshop ranges from those who have a minimal reverse engineering background, to seasoned malware analysts who are interested in new approaches. 
+
+A basic knowledge of x86 Assembly is recommended. Experience in WinDbg is not required.
+
+Information on the required setup and resources for the workshop can be found [here](https://git.io/Jem63). Be sure to check it out if you are attending the workshop.
 
 
 ### Bio: <a name="Benoit+Sevens"></a>Benoit Sevens
@@ -656,6 +1161,17 @@ This workshop will introduce the participants to the world of CTF contests as a 
 Cryptography is the art of disguising confidential data from eavesdroppers and making it accessible only to the authorized parties. It is built from the Number theory, a branch of pure mathematics devoted primarily to the study of integers. 
 Reverse Engineering, mainly includes understanding assembly language and reversing obfuscated Linux binaries. The attendees will get to learn about the usage of tools such as GDB and GHIDRA for dynamic analysis and IDA for static analysis. 
 Binary Exploitation is the art of ripping the binaries apart in order to find vulnerabilities and exploit them to spawn a shell on the server. The session will cover topics ranging from basic buffer overflow to learning overwriting return addresses and defeating ASLR.
+
+Key workshop takeaways:
+
+The participants will be able to walk away with the following takeaways from this class:
+
+Understand how CTFs can help getting started with security
+An overview of a jeopardy style CTF and basic tactics and techniques to solve them
+How to be fluent with scripting for sending exploits to the challenge server
+Practise challenges to help in applying learned concepts and deepen the understanding 
+Insight into RSA cryptosystem and learn how to implement basic attacks
+Reversing and Pwning Labs will help in getting a better understanding of binaries and exploiting them
 
 
 ### Bio: <a name="Shruti+Dixit"></a>Shruti Dixit
@@ -687,6 +1203,12 @@ This is exactly what [MISP Project](https://misp-project.org) and [TheHive Proje
 
 So come join us for three hours of **practical** incident response where **automation** and **collaboration** play a paramount role, using MISP, the *de facto* standard for threat sharing, TheHive, a Security Incident Response Platform and Cortex, a powerful analysis and active response engine.
 
+This workshop will take you through a journey where we’ll cover the six steps of incident response coated with CTI-related activities to investigate a real world incident, leveraging automation and collaboration whenever applicable.
+
+After a brief introduction to MISP, TheHive and Cortex, we’ll dive in the preparation steps to not only set up correctly the tools but establish a proper team organisation, create workflows and get ready for trouble as trouble will come just afterwards, as in the movies. Indeed, now that a threat has just materialised, what are you going to do? And how you would bring out the social animal in you to collaborate with fellow defenders in the room?
+
+The clock is ticking and the fun is on!
+
 
 ### Bio: <a name="Saad+Kadhi"></a>Saad Kadhi
 
@@ -698,6 +1220,15 @@ by Pauline
 
 At the core of every IoT device is its firmware. Detailed security assessment of devices starts with obtaining a copy of the firmware. The firmware can then be statically analysed or dynamically. Several techniques exist for firmware extraction. 
 This workshop takes participants through a low level firmware extraction process which is easy to perform and doesn’t require expensive hardware.
+
+We shall present how do it using a cheap USB to serial adapter.
+The workshop will be going through the process with the following steps :
+1. Examining the hardware and find a serial port
+2. If there is not serial port available, chase the working combinaison of pins to reveal
+the serial port
+3. Setting up of your minicom working environment
+4. Extracting the firmware
+5. Analyze
 
 
 ### Bio: <a name="Pauline"></a>Pauline
@@ -715,6 +1246,28 @@ You will learn about the various versions of Bluetooth Low Energy (from 4.0 to 5
 
 All of this by using (mostly) Btlejack \o/
 
+I. Bluetooth Low Energy 101
+I.1. Protocol overview
+I.2. Channel map and channel selection algorithms
+I.3. Basic PDUs you must know
+I.4. Required hardware
+
+II. Reconnaissance
+II.1. BLE advertisements
+II.2. Enumerating active connections
+II.3. (some kind of) Fingerprinting
+
+III. Passive attacks
+III.1. Sniffing with Btlejack
+III.2. How to determine the chipsets (vendor/version) and BLE version supported by a device
+III.3. How to capture and analyze unencrypted BLE communications
+III.4. How to break encrypted communications (when possible)
+
+IV. Active attacks
+IV.1. Jamming an active BLE connection
+IV.2. BLE hijacking
+IV.3. Manually testing a BLE stack
+
 
 ### Bio: <a name="Damien+Cauquil"></a>Damien Cauquil
 
@@ -727,6 +1280,25 @@ Damien is a senior security researcher who joined Digital Security in 2015 as he
 by Axelle Apvrille
 
 Learn how to install [Junior CTF](https://framagit.org/axellec/juniorctf) for your kids to test their hacking skills.
+
+**Junior CTF** is a collection of Capture The Flag challenges for kids aged around 8 to 16. They usually don't know how to code yet, and have (very) limited exposure to Unix. The idea is to have them nevertheless hack "like in movies".
+
+In this workshop, you will learn how to setup Junior CTF at home (or on a server you share with friends). We will go through the following:
+
+- Clone [CTFd](https://github.com/CTFd/CTFd)
+- Install **Docker**
+- Import challenge descriptions for your language in CTFd 
+- Launch challenge containers
+- How to customize or add new challenges
+
+This original workshop is for you:
+
+- If you have teenagers who'd like to hack
+- Or some of your colleagues would like to experiment hacking but they hardly know how to code and use Unix
+- You haven't ever installed CTFd. 
+
+
+Please come with your own laptop.
 
 
 ### Bio: <a name="Axelle+Apvrille"></a>Axelle Apvrille
@@ -743,6 +1315,12 @@ Nowadays sharing Indicator of compromise (IOCs) are common, look at the Misp pro
 
 At the big data era, having just an indicator like and IP address is not enough and in many cases as useful as a key of a treasure chest without any map. What really matter today is metadata: data about data.
 
+In this workshop, you will discovered IntelMQ, which is open source project for collecting and processing security feeds but not only.
+
+With no prior knowledge, you will explore the different possibilities offered by this tool and you will start to gather feeds and improve them for fitting your needs.
+
+In a nutshell, IntelMQ help you to collect, clean, enrich, normalize and store the data.
+
 
 ### Bio: <a name="Celine+Massompierre"></a>Celine Massompierre
 
@@ -755,6 +1333,19 @@ by Patrick Ventuzelo
 **WebAssembly (WASM)** is a new binary format currently **supported by all major web-browsers** (Firefox, Chrome, Safari and Edge). WebAssembly module are most commonly compiled from C/C++/Rust source code, loaded and executed inside JS scripts. It is known for being used for malicious purposes like **cryptojacking** but you will legitimately found usage of WebAssembly inside web-browsers addons, nodejs module or even blockchain smart contracts.
 
 In this workshop, I will first **introduce WebAssembly concepts** and why it’s consider as a “game changer for the web”. Secondly, I will expose **how to analyze a WebAssembly module** using different techniques (static & dynamic) as well as some **open-source tools that make you the life easier** (Octopus, Wasabi, ...). Finally, we will **hands-on with simple examples/crackmes** and finally go throws the **analysis of cryptominers**.
+
+# Workshop outline 
+
+The following point will be discussed in this workshop.
+
+* Introduction
+* WebAssembly Basics
+* WebAssembly Runtime VM
+* Module dissection
+* Reversing wasm module
+* Dynamic analysis
+* Cryptominers
+* Conclusion
 
 
 ### Bio: <a name="Patrick+Ventuzelo"></a>Patrick Ventuzelo
@@ -772,6 +1363,21 @@ by Quentin JEROME
 [WHIDS](https://github.com/0xrawsec/whids) is one of the first open source endpoint detection solution for windows designed with fast Incident Response in mind. It comes with a powerful rule definition format known as [Gene](https://github.com/0xrawsec/gene) allowing one to achieve complex detection primitives. One of its strengths compared to other approaches is that it dumps artifacts (process, file, registry) based on the criticality of the events detected. This allows one to collect artifacts as close as possible of the alert generated. This approach reduces considerably the incident response process while putting the focus on artifact analysis automation. 
 
 The purpose of this workshop will be twofold. In the first place I will introduce the tool and the rule definition format (30 to 45 mins). In a second part some hands-on with the attendees will be made (the rest of the time). The first part of the hands-on will cover simple WHIDS deployment and tweaking. Then comes a realistic case study. In the first place we will study a technique (or a malware) common to everyone and walk through all the steps leading to the final rule creation. Then the attendees will study on their own a technique or malware sample of their choice and build the appropriate detection rule(s). In the last part we will discuss on the possible implementations in a production environment.
+
+### Tools
+
+All the tools being used during the training will be open source or free tools.
+* [Sysmon from Sysinternals](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon)
+* [WHIDS](https://github.com/0xrawsec/whids)
+* [Gene](https://github.com/0xrawsec/gene)
+* [Public dataset of detection rules](https://github.com/0xrawsec/gene-rules)
+
+All the necessary VMs (Linux + Windows) will be prepared in advance for the attendees to win time during the training.
+
+### Targetted Audiance
+
+* People who care about threat detection on Windows
+* Any Blue Team member
 
 
 ### Bio: <a name="Quentin+JEROME"></a>Quentin JEROME
