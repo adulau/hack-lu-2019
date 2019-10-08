@@ -507,7 +507,7 @@ On his free time, Itay loves to participate in CTF competitions and to contribut
 Ari Eitan is the VP Research of Intezer Labs, a security researcher and Incident Response professional. Ari served as the head of IDF Incident Response team and has vast experience in dealing with Nation-sponsored cyber attacks, specializing in Malware Analysis, Reverse Engineering and Forensics. He has spoken at a variety of security conferences and trainings, including the first BsidesTLV, Kaspersky SAS, and for government organizations and international agencies.
 
 
-## <a name="Mr."></a>Mr.
+## <a name="Hacktivism+as+a+defense+technique+in+a+cyberwar.+%23FRD+Lessons+for+Ukraine"></a>Hacktivism as a defense technique in a cyberwar. #FRD Lessons for Ukraine
 by Kostiantyn Korsun
 
 Since 2014 Ukraine is under cyberwar. 
@@ -519,7 +519,7 @@ My talk is a historical retrospective of #FRD: when and how it started, what emo
 The preso contains plenty of expressive screenshots.
 
 I researched #FRD as a unique activity in modern cybersecurity world.
-The main goal of #FRD is to increase of cybersecurity of Ukraine. 
+The main goal of #FRD is to increase cybersecurity level in Ukraine.
 However Ukrainian cyber activists used controversial methods to get this goal publishing indicators of low level of cyber protection in Governmental institutions and critical infrastructure objects.
 What was right/wrong in #FRD and how it influenced on national cybersecurity?
 This is the matter of the research.
@@ -1067,31 +1067,24 @@ Eva has master's degrees in electrical engineering and in networks and telecommu
 ## <a name="AppSec+101%3A+Understanding+and+exploiting+buffer+overflows"></a>AppSec 101: Understanding and exploiting buffer overflows
 by Antonin Beaujeant
 
-This workshop will try to explain to you the most common vulnerabilities identified in binary applications, i.e. buffer overflow, use-after-free, format string and integer under/overflow.
-
-URL: https://beaujeant.gitbook.io/appsec101/
+This workshop will explain one of the most known application security vulnerability: the buffer overflow. We will start from the very beginning explaining what a CPU is, how does it executes operations and coordinate with the memory and inputs/outputs in order to run applications. We will then have a programming crash course (C language) then move to a assembly. Don't worry, we won't go too deep, just enough to understand the next chapter: understanding, identifying and exploiting a buffer overflow.
 
 What will this workshop teach you?
-
-* Understanding the structure and purpose of the CPU and the memory
-* Basics of C programming
-* Basics of assembly
-* Understanding and exploiting basic buffer overflow
-* Understanding and exploiting basic use-after-free vulnerability
-* Understanding and exploiting basic format string vulnerability
-* Understanding and exploiting basic integer overflow and underflow vulnerabilities
+- Understanding the structure and purpose of the CPU and the memory
+- Basics of C programming
+- Basics of assembly
+- Understanding and exploiting basic buffer overflow
 
 What this course won’t teach you?
+- Reverse engineering
+- Coding in C or Assembly (although we will briefly cover both)
+- Explain, use and create fuzzers
+- Create your own shellcode
+- Return-Oriented-Programming exploitation (ROP)
 
-* Reverse engineering
-* Coding in C or Assembly (although we will briefly cover both)
-* Explain, use and create fuzzers
-* Create your own shellcode
+Please make sure to come with a Linux (ideally Ubuntu) i386 (32-bit) if you want to follow the exercices.
 
-Minimum requirements:
-
-* Being familiar with computer
-* Being able to read C code (or similar language)
+Course materials: https://beaujeant.gitbook.io/appsec101/
 
 
 ### Bio: <a name="Antonin+Beaujeant"></a>Antonin Beaujeant
