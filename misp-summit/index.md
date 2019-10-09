@@ -30,6 +30,10 @@ The MISP Summit will take place from 10:00 to 17:00, Monday 21th October 2019.
 
 The agenda can be consulted at [https://cfp.hack.lu/tsc19/schedule/](https://cfp.hack.lu/tsc19/schedule/).
 
+{% raw %}
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" height="1600" width="100%" src="https://cfp.hack.lu/tsc19/schedule/"></iframe>
+{% endraw %}
+
 Where
 -----
 
