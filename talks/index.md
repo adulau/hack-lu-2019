@@ -290,36 +290,7 @@ Within blue teams, it is crucial to have sufficient and adequate information on 
 
 Obtaining and administrating this information can be a challenge. In this talk we present the DeTT&CT framework, build atop of MITRE ATT&CK, that helps blue teams to gain insight into these aspects and to start prioritising their defence efforts. The ultimate goal of DeTT&CT is to become more resilient against attacks targeting your organisation.
 
-1. Introduction
-We start with a short introduction on what we will present and who we are.    
 
-2. Getting everybody on the same level – MITRE ATT&CK™
-Within the talk ATT&CK is a key concept. It is therefore essential that we introduce ATT&CK to the audience.
-
-3. Problem statement – where to start hunting?
-While performing threat hunting, we encountered multiple challenges in prioritising our hunting investigations. The first questions we asked ourselves: how good is our visibility to find certain attacker behaviours in our logs? Which attack techniques are we already able to detect and how good is that detection? To conclude with the question: which attack techniques are the most relevant to our organisation based on threat intelligence?
-
-4. Solving the problem – DeTT&CT framework
-DeTT&CT is a framework built atop of ATT&CK to help you with the following: scoring the quality of your data sources, getting insight into your visibility, get to know your detection coverage and threat actor behaviours relevant for your organisation. All the information on these aspects can be administrated in the DeTT&CT framework.
-
-The main goal of this part of the talk is to provide general information on DeTT&CT that is necessary for the upcoming slides.
-
-5. DeTT&CT - data sources
-We will cover important dimensions of data quality concerning the data sources that are listed in ATT&CK. We then proceed to explain how these data sources are used to automate your visibility coverage on ATT&CK techniques. 
-
-6. DeTT&CT - visibility
-Getting an automated overview of your visibility has some difficulties that we tackle within the DeTT&CT framework. We explain our methodology on how to approach this the most effectively.
-
-7. DeTT&CT - detection coverage
-Another core aspect is knowing your detections and how well or poorly they perform. We explain how we approach this in DeTT&CT and which important nuances should be taken into account (not every ATT&CK technique can be a candidate for detection and not every attack technique is part of ATT&CK).
-
-8. DeTT&CT - threat actor behaviours
-We share several approaches on how to use DeTT&CT in mapping threat actor behaviours to the ATT&CK matrix. DeTT&CT can make use of information on threat actor behaviours available in ATT&CK, and it is also possible to load your own intelligence. We will explain how to administrate and use this within the DeTT&CT framework.
-
-9. Problem solved - prioritise to improve your defences
-All the information on previously mentioned aspects can be combined to allow the prioritisation of your hunting, and other defence efforts, based on gaps in the ATT&CK Matrix linked to threat actor behaviours.
-
-10. Questions?
 
 
 ### Bio: <a name="Marcus+Bakker"></a>Marcus Bakker
@@ -519,7 +490,7 @@ My talk is a historical retrospective of #FRD: when and how it started, what emo
 The preso contains plenty of expressive screenshots.
 
 I researched #FRD as a unique activity in modern cybersecurity world.
-The main goal of #FRD is to increase cybersecurity level in Ukraine.
+The main goal of #FRD is to increase cybersecurity level in Ukraine. 
 However Ukrainian cyber activists used controversial methods to get this goal publishing indicators of low level of cyber protection in Governmental institutions and critical infrastructure objects.
 What was right/wrong in #FRD and how it influenced on national cybersecurity?
 This is the matter of the research.
