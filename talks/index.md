@@ -1391,7 +1391,7 @@ https://oscd.community/
 
 ### Bio: <a name="Daniil+Yugoslavskiy"></a>Daniil Yugoslavskiy
 
-Daniil is leading Threat Detection team at Tieto Security Operations Center (SOC) in Czech Republic, Ostrava. Before that, he was responsible for processes and systems architecture development of Informzaschita SOC in Moscow, Russia. Daniil spent more than six years in Practical Computer Security and Network Monitoring domains.
-He holds OSCP, CCNP Security, GCFA and GNFA certifications. He had talks at Code Europe, CONFidence, Amsterdam FIRST Technical Colloquium, x33fcon, EU MITRE ATT&CK community workshops, Positive Hack Days, presenting Intelligence-Driven Defence approach implementation and MITRE ATT&CK operationalization.
-Daniil is also member of GIAC Advisory Board, Krakow 2600 Meetings coordinator and creator of Atomic Threat Coverage project.
+Daniil is responsible for Threat Detection in Cindicator Security Operations Center (SOC) in Saint Petersburg, Russia. Before that, he was leading Threat Detection team at Tieto SOC in Czech Republic. Daniil spent more than six years in Practical Computer Security and Network Monitoring domains.
+He holds OSCP, CCNP Security, GCFA and GNFA certifications. He had talks at x33fcon, Positive Hack Days, Security BSides, CONFidence, Amsterdam FIRST Technical Colloquium, EU MITRE ATT&CK community workshops, Code Europe, presenting Intelligence-Driven Defence approach implementation and MITRE ATT&CK operationalization.
+Daniil is also a member of GIAC Advisory Board and creator of Atomic Threat Coverage project.
 
