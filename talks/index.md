@@ -75,6 +75,28 @@ Now, it has been established, that compromised compilers can introduce bugs to o
 Marion Marschalek is a former Malware Analyst and Reverse Engineer who recently started work at Intel in order to conquer the field of low level security research, where she nowadays spends an unusual amount of time looking at compiler source code. She has spoken at all the conferences and such, and seen all the things, and is one of the happiest hackers out there. Also, she runs a free reverse engineering bootcamp for women, because the world needs more researcherettes.
 
 
+## <a name="Memory+forensics+analysis+of+Cisco+IOS+XR+32+bits+routers+with+%27Amnesic-Sherpa%27"></a>Memory forensics analysis of Cisco IOS XR 32 bits routers with 'Amnesic-Sherpa'
+by Solal jacob
+
+Nowadays attackers are targeting not only computers but also core network equipment like routers by using memory-only attacks that are difficult to detect as the firmware image is not modified. In order to determine if a router was compromised by a memory-only attack, we need to be able to perform forensics analysis on it, but this requires specialized tools. This presentation is about CISCO IOS XR router forensics. We will explain how work the internal of a CISCO IOS XR 32 bits, router running under the QNX operating system. And, as no tool currently exists to analyze CISCO IOS XR routers, we developed a router forensics framework called 'Amnesic-Sherpa', aimed at analyzing memory dump, that can be used to know if a router was compromised. This framework will be released as open-source.
+
+This presentation will be divided in different parts:
+
+The first part gives the necessary background: the context and the wide number of OSes in routers. We also describe the architecture of QNX, the microkernel running on IOS XR-32, and how it works: the startup
+process, how the firmware is packed, the file systems in the firmware images, and the specific communication system between the processes.
+
+Then, we will explain how we developed a specific memory acquisition tool and an analysis framework call 'Amnesic-Sherpa', aim at analyze those routers.
+
+The tool first looks for all the interesting structures and information that can be present in an IOS XR memory dump, then tries to re-create the memory structures present in different parts of the microkernel memory at the moment of the dump, and extracts all available information. The tool then let the user inspects theses structures to find traces of compromise or anomalies.
+
+In the last part, we verify the detection capabilities of our framework by manually modifying processes to simulate a memory attack. We then demonstrate how to use 'Amnesic-Sherpa' (and third party tools) to detect this attack and how the detection process could be automated.
+
+
+### Bio: <a name="Solal+jacob"></a>Solal jacob
+
+Solal is currently a researcher at the LED (research and Exploration in intrusion Detection Laboratory) at the ANSSI (French National Network & Cybersecurity agency), where he work on finding new ways to detect attacks. Before that Solal worked 10 years at ArxSys a company he founded, where he was core developer of DFF , an open-source digital forensics framework. He also conduct forensics investigation, do incident response missions, and trained people on these subjects.
+
+
 ## <a name="The+Road+to+Hell+is+Paved+with+Bad+Passwords"></a>The Road to Hell is Paved with Bad Passwords
 by Chris Kubecka
 
@@ -156,6 +178,23 @@ Gerhard was speaker at different IT security conferences like GPN,
 Ruxcon, and DeepSec, where he talked about hacking RFID-based student
 cards or the security of wireless desktop sets. He is also author of the
 Mifare Classic Tool Android app.
+
+
+## <a name="Piercing+the+Veil%3A+Server+Side+Request+Forgery+attacks+on+Internal+Networks."></a>Piercing the Veil: Server Side Request Forgery attacks on Internal Networks.
+by Alyssa Herrera
+
+I demonstrate a successful attack on a cloud-based US Defense website, gaining access to a sensitive internal network, enumeration of internal services, out of bands data leakage and attack vectors unique to cloud architecture. Additionally I will discuss mitigation points for server side request forgery, how this type of vulnerability can manifest, what this type of attack is, and how I'm able to legally hack the Department Of U.S Defense.
+
+Server-side request forgery (SSRF) attacks abuse poorly secured requests made on the server-side; these requests appear in many circumstances, from getting a user's avatar to pinging a third-party webhook. SSRF attacks hijack these HTTP requests, allowing an attacker to exploit the application to route URL/IP requests and subsequently probe or access sensitive networks.
+
+Unsurprisingly, this can lead to serious breaches of security: exfiltration of secret keys, spoofing of email, and, ultimately, an entry point into an otherwise secure system. On cloud systems, SSRF gives the attacker a way to query for metadata which can reveal security credentials, or access tokens to the instance. Different cloud providers offer different safeguards; likewise they may make the threat far less clear than others do!
+
+In this case study, I'll describe how, as part of a recent U.S. Department of Defense vulnerability disclosure program, I gained access to the Non-Classified Internet Protocol Router Network (NIPRNET). We'll look at the SSRF techniques that I used to access AWS metadata and reveal sensitive information about cloud instances. I'll also talk about some techniques for protection against SSRF - input validation, compartmentalized services, access control, and security policies.
+
+
+### Bio: <a name="Alyssa+Herrera"></a>Alyssa Herrera
+
+Alyssa Herrera is a full-time bug bounty hacker, working to protect countless organizations including the U.S. Department of Defense (DoD), Sony, Zendesk, Adobe, and Twitter. She got her start when she was in middle school, teaching herself how to gain administrative access to play games on her school computers. At age 16, Alyssa Herrera discovered Bug Bounties and HackerOne — and she hasn't looked back since. She is currently a top ranked hacker on multiple bug bounty platforms and has discovered 161 valid vulnerabilities on the HackerOne platform alone to date. Alyssa attends live hacking events across the globe, where she has the opportunity to work with small groups of hackers to find vulnerabilities in organizations such as Verizon Media and Airbnb. As Alyssa paves her own path, she is motivated to give back to the community by sharing the knowledge she has gained and become a role model for other aspiring female hackers.
 
 
 ## <a name="Fingerpointing+False+Positives%3A+How+to+better+integrate+Continuous+Improvement+into+Security+Monitoring"></a>Fingerpointing False Positives: How to better integrate Continuous Improvement into Security Monitoring
@@ -501,46 +540,61 @@ This is the matter of the research.
 As former deputy head of Cybercrime Division at Security Service of Ukraine (colonel ret.), Kostyantyn Korsun was one of the founders and the first head of CERT-UA. After resigning from the service, Kos acted as Regional Director for Ukraine Research Office of iSIGHT Partners, international cyber threat intelligence company. Then he cooperated with Symantec Corp. as an official vendor of Threat Intelligence service. Currently a CEO and Co-Founder of Berezhs Security LLC., a company that provides services in Penetration Testing, Security Awareness Programs, Software Security Assessment, Bug Bounty Program, Social Engineering Assessment, Application Security Programs. Mr. Korsun is an active member of the local cyber community in Ukraine promoting cybersecurity ideas within Ukrainian society.
 
 
-## <a name="Memory+forensics+analysis+of+Cisco+IOS+XR+32+bits+routers+with+%27Amnesic-Sherpa%27"></a>Memory forensics analysis of Cisco IOS XR 32 bits routers with 'Amnesic-Sherpa'
-by Solal jacob
+## <a name="DNS+On+Fire"></a>DNS On Fire
+by Rascagneres Paul, Warren Mercer
 
-Nowadays attackers are targeting not only computers but also core network equipment like routers by using memory-only attacks that are difficult to detect as the firmware image is not modified. In order to determine if a router was compromised by a memory-only attack, we need to be able to perform forensics analysis on it, but this requires specialized tools. This presentation is about CISCO IOS XR router forensics. We will explain how work the internal of a CISCO IOS XR 32 bits, router running under the QNX operating system. And, as no tool currently exists to analyze CISCO IOS XR routers, we developed a router forensics framework called 'Amnesic-Sherpa', aimed at analyzing memory dump, that can be used to know if a router was compromised. This framework will be released as open-source.
+Cisco Talos identified malicious actors targeting the DNS protocol successfully for the past several years. In the presentation, we will present 2 threat actors we have been tracking.
 
-This presentation will be divided in different parts:
+The first one developed a piece of malware, named DNSpionage, targeting several government agencies in the Middle East, as well as an airline. During the research process for DNSpionage, we also discovered an effort to redirect DNSs from the targets and discovered some registered SSL certificates for them. We identified multiple countries targeted by this redirection. On 22 January 2019, the US DHS published a directive concerning this attack vector. In this presentation, we will present the timeline for these events and their technical details. 
 
-The first part gives the necessary background: the context and the wide number of OSes in routers. We also describe the architecture of QNX, the microkernel running on IOS XR-32, and how it works: the startup
-process, how the firmware is packed, the file systems in the firmware images, and the specific communication system between the processes.
+The second actor is behind the campaign we named “Sea Turtle”. This actor is more advanced and more aggressive than the previous one. They do not hesitate to target directly registrars and one registry. The talk will present the 2 actors and the methodology used to target the victims.
 
-Then, we will explain how we developed a specific memory acquisition tool and an analysis framework call 'Amnesic-Sherpa', aim at analyze those routers.
-
-The tool first looks for all the interesting structures and information that can be present in an IOS XR memory dump, then tries to re-create the memory structures present in different parts of the microkernel memory at the moment of the dump, and extracts all available information. The tool then let the user inspects theses structures to find traces of compromise or anomalies.
-
-In the last part, we verify the detection capabilities of our framework by manually modifying processes to simulate a memory attack. We then demonstrate how to use 'Amnesic-Sherpa' (and third party tools) to detect this attack and how the detection process could be automated.
+This talk will include:
+  - DNS presentation because few ppl mix register, registrar, registrant
+  -  the oilrig leak on the similarities between DNSpionage and the technical details in the leak.
+  - unpublished DNS hijack if the investigation is finished by the conference.
 
 
-### Bio: <a name="Solal+jacob"></a>Solal jacob
+### Bio: <a name="Rascagneres+Paul"></a>Rascagneres Paul
 
-Solal is currently a researcher at the LED (research and Exploration in intrusion Detection Laboratory) at the ANSSI (French National Network & Cybersecurity agency), where he work on finding new ways to detect attacks. Before that Solal worked 10 years at ArxSys a company he founded, where he was core developer of DFF , an open-source digital forensics framework. He also conduct forensics investigation, do incident response missions, and trained people on these subjects.
+Paul is a security researcher within Talos, Cisco’s threat intelligence and research organization. As a researcher, he performs investigations to identify new threats and presents his findings as publications and at international security conferences throughout the world. He has been involved in security research for 7 years, mainly focusing on malware analysis, malware hunting and more specially on Advanced Persistence Threat campaigns and rootkit capabilities. He previously worked for several incident response team within the private and public sectors.
+
+
+### Bio: <a name="Warren+Mercer"></a>Warren Mercer
+
+
 
 
 ## <a name="Leveraging+KVM+as+a+debugging+platform"></a>Leveraging KVM as a debugging platform
 by Mathieu
 
-Virtual Machine Introspection keeps opening new possibilities to interact with Virtual Machines, from sandboxing (VMRay), to cloud monitoring solutions (BitDefender HVI).
+Virtual Machine Introspection keeps opening new possibilities to interact with
+Virtual Machines, from sandboxing (VMRay), to cloud monitoring solutions
+(BitDefender HVI).
 
-Our debuggers needs to benefit from this approach too, and so far we have seen multiple open source projects trying to leverage the hypervisor as a new debugging platform.
-However, most of these solutions are tied to one hypervisor.
+Our debuggers needs to benefit from this approach too, and so far we have seen
+multiple open source projects trying to leverage the hypervisor as a new
+debugging platform. However, most of these solutions are tied to one
+hypervisor.
 
-The VMI ecosystem can only grow if it can bring all developers under the same roof, and provide the core libraries that will be the foundation for all VMI applications.
+The VMI ecosystem can only grow if it can bring all developers under the same
+roof, and provide the core libraries that will be the foundation for all VMI
+applications.
 
-Keeping this vision in mind, pyvmidbg is a GDB stub built on top of LibVMI, a hypervisor-agnostic VMI library.
-It can introspect Windows VMs and explore the execution context, as well as intercepting the entrypoint of new processes, making it suited for malware analysis and reverse-engineering.
+Keeping this vision in mind, pyvmidbg is a GDB stub built on top of LibVMI, a
+hypervisor-agnostic VMI library. It can introspect Windows VMs and explore the
+execution context to target and debug a specific process running on the system.
 
-One of the goals of pyvmidbg is to attract developers and potential users by witing the missing layers that prevent VMI from gaining a wider adoption as of today.
+One of the goals of pyvmidbg is to attract developers and users by writing the
+missing layers that prevent VMI from gaining a wider adoption as of today.
 
-The lack of VMI APIs available on KVM has made of LibVMI a Xen centric library, despite its flexible architecture. 
+The lack of VMI APIs available on KVM has made of LibVMI a Xen centric library,
+despite its flexible architecture.  However, the situation recently changed in
+2017, thanks to BitDefender proposing a new set of APIs for introspection.
 
-This talk will demonstrate the efforts of porting pyvmidbg to KVM and the state of the LibVMI KVM driver.
+This talk will demonstrate the new KVM introspection subsystem proposed by
+BitDefender, its integration in LibVMI, and how pyvmidbg is running on top of
+KVM today.
 
 
 
@@ -548,85 +602,6 @@ This talk will demonstrate the efforts of porting pyvmidbg to KVM and the state 
 ### Bio: <a name="Mathieu"></a>Mathieu
 
 TODO
-
-
-## <a name="Exploiting+bug+report+systems+in+the+game+industry"></a>Exploiting bug report systems in the game industry
-by Andreia Gaita
-
-In the world of development, what do you do when you run into a bug in the library, framework, or middleware you're using? You submit a bug report and describe the steps. The companies providing you with the software expect and encourage you to send in repro code, but the bigger the system, the more complex the code needs to be to reproduce the problem. In the case of game development, the expectation is that when you find a bug, you submit a complete test project that exemplifies the problem, so that test teams can reproduce it. What can these test projects contain? How are they tested by companies developing game engines and middleware? What potential exploitation venues does this open?
-
-There are unique conditions in the game industry that make it particularly vulnerable to certain types of attacks, but its uniqueness also makes it somewhat of a puzzle to the rest of the tech industry. In this talk, we'll go through some of the particulars of how game development works, and how these practices and bug reporting systems can be exploited to gain access to the core of development teams across the game industry.
-
-
-
-
-### Bio: <a name="Andreia+Gaita"></a>Andreia Gaita
-
-Andreia Gaita is a freelance cross-platform games and tools developer, recently shifting her focus to security work. For the past 18 years, she has been involved in the development of game engines, applications, open source tools and libraries, and has been an engineering manager and tech lead at companies like GitHub, Unity, and Xamarin. She hails from the sunny city of Lisbon, Portugal, and currently lives in Copenhagen, Denmark, where she bikes a lot (when it's warm).
-
-
-## <a name="Beyond+Windows+Forensics+with+Built-in+Microsoft+Tooling"></a>Beyond Windows Forensics with Built-in Microsoft Tooling
-by Thomas Fischer
-
-Microsoft has slowly been introducing tools to help organisations better manage and troubleshoot Windows performance and issues; these are now entirely integrated into Windows. To improve performance and troubleshooting capabilities, Microsoft introduced System Resource Usage Monitor (SRUM) in Windows 8 and beyond. PowerShell has become the default “command line” management tool for windows administrators. These tools provide both a wealth of information into what has happened and is present on the system.
-
-For Forensics and even Incident Response, these tools are now a go to built-in option to bootstrap and drive the forensics process including opening access to artefacts that overzealous user or even a “smart” attacker has removed. SRUM for instance can provide data points ranging from network to process activitiy providing insight into what, who, when and how an attacker or malicious process introduced itself into the environment. 
-
-This talk will help the participant build the foundations to identify which built in tools can assist in the Windows Forensics process and the data points that are available as well as examine how services such as SRUM can be used to extract key data points to provide information for incident response or threat hunting activities.
-
-
-
-
-### Bio: <a name="Thomas+Fischer"></a>Thomas Fischer
-
-Thomas has over 30 years of experience in the IT industry ranging from software development to infrastructure & network operations and architecture to settle in information security. He has an extensive security background covering roles from incident responder to security architect at fortune 500 companies, vendors and consulting organisations. He is currently security advocate and threat researcher focused on advising companies on understanding their data protection activities against malicious parties not just for external threats but also compliance instigated.
-
-Thomas is also an active participant in the InfoSec community not only as a member but also as director of Security BSides London, ISSA UK chapter board member and speaker at events like SANS DFIR EMEA, DeepSec, Shmoocon, Troopers and various BSides events.
-
-
-## <a name="Defeating+Bluetooth+Low+Energy+5+PRNG+for+fun+and+jamming"></a>Defeating Bluetooth Low Energy 5 PRNG for fun and jamming
-by Damien Cauquil
-
-Bluetooth Low energy version 5 has been published in late 2016, but we still have
-  no sniffer supporting this specific version (and not that much compatible devices
-  as well). The problem is this new version introduces a new channel hopping algorithm
-  that renders previous sniffing tools useless as devices can no longer be attacked
-  and connections analyzed. This new algorithm is based on a brand new pseudo-random
-  number generator (PRNG) to provide better collision avoidance while kicking out
-  all of our good old sniffing tools.
-
-  Unless some random hacker manages to break this not-that-strong PRNG and upgrades
-  his BLE sniffing tool to support this algorithm ;). In this talk, we will explain
-  why this PRNG is vulnerable and how it can be easily defeated to sniff and jam
-  communications between two BLE 5 devices. A new version of BtleJack will be
-  released during this talk, providing an efficient way to sniff BLE 5 connections
-  to our fellow IoT hacker family.
-
-
-
-
-### Bio: <a name="Damien+Cauquil"></a>Damien Cauquil
-
-Damien is a senior security researcher who joined Digital Security in 2015 as head of research and development. He discovered how wireless protocols can be fun to hack and quickly developed BtleJuice, one of the first Bluetooth Low Energy MitM framework, and BtleJack, a BLE swiss-army knife released in 2018.
-
-  Damien presented at various security conferences including DEF CON, Hack In Paris, Chaos Communication Camp, Chaos Communication Congress, BruCon, Hack.lu, anda dozen times at Nuit du Hack, one of the oldest French hacking conference.
-
-
-## <a name="Piercing+the+Veil%3A+Server+Side+Request+Forgery+attacks+on+Internal+Networks."></a>Piercing the Veil: Server Side Request Forgery attacks on Internal Networks.
-by Alyssa Herrera
-
-I demonstrate a successful attack on a cloud-based US Defense website, gaining access to a sensitive internal network, enumeration of internal services, out of bands data leakage and attack vectors unique to cloud architecture. Additionally I will discuss mitigation points for server side request forgery, how this type of vulnerability can manifest, what this type of attack is, and how I'm able to legally hack the Department Of U.S Defense.
-
-Server-side request forgery (SSRF) attacks abuse poorly secured requests made on the server-side; these requests appear in many circumstances, from getting a user's avatar to pinging a third-party webhook. SSRF attacks hijack these HTTP requests, allowing an attacker to exploit the application to route URL/IP requests and subsequently probe or access sensitive networks.
-
-Unsurprisingly, this can lead to serious breaches of security: exfiltration of secret keys, spoofing of email, and, ultimately, an entry point into an otherwise secure system. On cloud systems, SSRF gives the attacker a way to query for metadata which can reveal security credentials, or access tokens to the instance. Different cloud providers offer different safeguards; likewise they may make the threat far less clear than others do!
-
-In this case study, I'll describe how, as part of a recent U.S. Department of Defense vulnerability disclosure program, I gained access to the Non-Classified Internet Protocol Router Network (NIPRNET). We'll look at the SSRF techniques that I used to access AWS metadata and reveal sensitive information about cloud instances. I'll also talk about some techniques for protection against SSRF - input validation, compartmentalized services, access control, and security policies.
-
-
-### Bio: <a name="Alyssa+Herrera"></a>Alyssa Herrera
-
-Alyssa Herrera is a full-time bug bounty hacker, working to protect countless organizations including the U.S. Department of Defense (DoD), Sony, Zendesk, Adobe, and Twitter. She got her start when she was in middle school, teaching herself how to gain administrative access to play games on her school computers. At age 16, Alyssa Herrera discovered Bug Bounties and HackerOne — and she hasn't looked back since. She is currently a top ranked hacker on multiple bug bounty platforms and has discovered 161 valid vulnerabilities on the HackerOne platform alone to date. Alyssa attends live hacking events across the globe, where she has the opportunity to work with small groups of hackers to find vulnerabilities in organizations such as Verizon Media and Airbnb. As Alyssa paves her own path, she is motivated to give back to the community by sharing the knowledge she has gained and become a role model for other aspiring female hackers.
 
 
 ## <a name="Who+contains+the+containers"></a>Who contains the containers
@@ -841,29 +816,86 @@ Emilien Le Jamtel is a French security analyst, versatile member of CERT-EU sinc
 
 
 
-## <a name="DNS+On+Fire"></a>DNS On Fire
-by Rascagneres Paul, Warren Mercer
+## <a name="Exploiting+bug+report+systems+in+the+game+industry"></a>Exploiting bug report systems in the game industry
+by Andreia Gaita
 
-Cisco Talos identified malicious actors targeting the DNS protocol successfully for the past several years. In the presentation, we will present 2 threat actors we have been tracking.
+In the world of development, what do you do when you run into a bug in the library, framework, or middleware you're using? You submit a bug report and describe the steps. The companies providing you with the software expect and encourage you to send in repro code, but the bigger the system, the more complex the code needs to be to reproduce the problem. In the case of game development, the expectation is that when you find a bug, you submit a complete test project that exemplifies the problem, so that test teams can reproduce it. What can these test projects contain? How are they tested by companies developing game engines and middleware? What potential exploitation venues does this open?
 
-The first one developed a piece of malware, named DNSpionage, targeting several government agencies in the Middle East, as well as an airline. During the research process for DNSpionage, we also discovered an effort to redirect DNSs from the targets and discovered some registered SSL certificates for them. We identified multiple countries targeted by this redirection. On 22 January 2019, the US DHS published a directive concerning this attack vector. In this presentation, we will present the timeline for these events and their technical details. 
-
-The second actor is behind the campaign we named “Sea Turtle”. This actor is more advanced and more aggressive than the previous one. They do not hesitate to target directly registrars and one registry. The talk will present the 2 actors and the methodology used to target the victims.
-
-This talk will include:
-  - DNS presentation because few ppl mix register, registrar, registrant
-  -  the oilrig leak on the similarities between DNSpionage and the technical details in the leak.
-  - unpublished DNS hijack if the investigation is finished by the conference.
+There are unique conditions in the game industry that make it particularly vulnerable to certain types of attacks, but its uniqueness also makes it somewhat of a puzzle to the rest of the tech industry. In this talk, we'll go through some of the particulars of how game development works, and how these practices and bug reporting systems can be exploited to gain access to the core of development teams across the game industry.
 
 
-### Bio: <a name="Rascagneres+Paul"></a>Rascagneres Paul
-
-Paul is a security researcher within Talos, Cisco’s threat intelligence and research organization. As a researcher, he performs investigations to identify new threats and presents his findings as publications and at international security conferences throughout the world. He has been involved in security research for 7 years, mainly focusing on malware analysis, malware hunting and more specially on Advanced Persistence Threat campaigns and rootkit capabilities. He previously worked for several incident response team within the private and public sectors.
 
 
-### Bio: <a name="Warren+Mercer"></a>Warren Mercer
+### Bio: <a name="Andreia+Gaita"></a>Andreia Gaita
+
+Andreia Gaita is a freelance cross-platform games and tools developer, recently shifting her focus to security work. For the past 18 years, she has been involved in the development of game engines, applications, open source tools and libraries, and has been an engineering manager and tech lead at companies like GitHub, Unity, and Xamarin. She hails from the sunny city of Lisbon, Portugal, and currently lives in Copenhagen, Denmark, where she bikes a lot (when it's warm).
 
 
+## <a name="Beyond+Windows+Forensics+with+Built-in+Microsoft+Tooling"></a>Beyond Windows Forensics with Built-in Microsoft Tooling
+by Thomas Fischer
+
+Microsoft has slowly been introducing tools to help organisations better manage and troubleshoot Windows performance and issues; these are now entirely integrated into Windows. To improve performance and troubleshooting capabilities, Microsoft introduced System Resource Usage Monitor (SRUM) in Windows 8 and beyond. PowerShell has become the default “command line” management tool for windows administrators. These tools provide both a wealth of information into what has happened and is present on the system.
+
+For Forensics and even Incident Response, these tools are now a go to built-in option to bootstrap and drive the forensics process including opening access to artefacts that overzealous user or even a “smart” attacker has removed. SRUM for instance can provide data points ranging from network to process activitiy providing insight into what, who, when and how an attacker or malicious process introduced itself into the environment. 
+
+This talk will help the participant build the foundations to identify which built in tools can assist in the Windows Forensics process and the data points that are available as well as examine how services such as SRUM can be used to extract key data points to provide information for incident response or threat hunting activities.
+
+
+
+
+### Bio: <a name="Thomas+Fischer"></a>Thomas Fischer
+
+Thomas has over 30 years of experience in the IT industry ranging from software development to infrastructure & network operations and architecture to settle in information security. He has an extensive security background covering roles from incident responder to security architect at fortune 500 companies, vendors and consulting organisations. He is currently security advocate and threat researcher focused on advising companies on understanding their data protection activities against malicious parties not just for external threats but also compliance instigated.
+
+Thomas is also an active participant in the InfoSec community not only as a member but also as director of Security BSides London, ISSA UK chapter board member and speaker at events like SANS DFIR EMEA, DeepSec, Shmoocon, Troopers and various BSides events.
+
+
+## <a name="Defeating+Bluetooth+Low+Energy+5+PRNG+for+fun+and+jamming"></a>Defeating Bluetooth Low Energy 5 PRNG for fun and jamming
+by Damien Cauquil
+
+Bluetooth Low energy version 5 has been published in late 2016, but we still have
+  no sniffer supporting this specific version (and not that much compatible devices
+  as well). The problem is this new version introduces a new channel hopping algorithm
+  that renders previous sniffing tools useless as devices can no longer be attacked
+  and connections analyzed. This new algorithm is based on a brand new pseudo-random
+  number generator (PRNG) to provide better collision avoidance while kicking out
+  all of our good old sniffing tools.
+
+  Unless some random hacker manages to break this not-that-strong PRNG and upgrades
+  his BLE sniffing tool to support this algorithm ;). In this talk, we will explain
+  why this PRNG is vulnerable and how it can be easily defeated to sniff and jam
+  communications between two BLE 5 devices. A new version of BtleJack will be
+  released during this talk, providing an efficient way to sniff BLE 5 connections
+  to our fellow IoT hacker family.
+
+
+
+
+### Bio: <a name="Damien+Cauquil"></a>Damien Cauquil
+
+Damien is a senior security researcher who joined Digital Security in 2015 as head of research and development. He discovered how wireless protocols can be fun to hack and quickly developed BtleJuice, one of the first Bluetooth Low Energy MitM framework, and BtleJack, a BLE swiss-army knife released in 2018.
+
+  Damien presented at various security conferences including DEF CON, Hack In Paris, Chaos Communication Camp, Chaos Communication Congress, BruCon, Hack.lu, anda dozen times at Nuit du Hack, one of the oldest French hacking conference.
+
+
+## <a name="Effectiveness+in+simplicity%3A+The+Taskmasters+APT"></a>Effectiveness in simplicity: The Taskmasters APT
+by Elmar Nabigaev
+
+It is often thought that APT attacks is complex and involve 0-day exploits, stealthy lateral movement and hidden exfiltration path.
+While this can be true, it is rarely the case. Even APT actors follow "it if works - don't broke it" rule and use tried and true tactics. If they can get away with it and achieve their goals, why not?
+
+In this talk I’m going to present our discovery of an APT group which used rather simple TTPs but managed to stay undetected and hidden for years while breaching some high value targets in the fields of government, manufacturing, telecommunications etc.
+
+We’re going to dive deep into incident response cases, dissection of tools and techniques they used to infiltrate targets and cover possible attribution.
+
+I’m also going to talk about problems we faced during responding to these cases and present recommendations how to defend networks against this adversary.
+
+
+
+
+### Bio: <a name="Elmar+Nabigaev"></a>Elmar Nabigaev
+
+Elmar is a head of threat intelligence and incident response division at Positive Technologies. He have over 10 years of infosec experience responding to incidents, doing threat hunting and producing threat intelligence. He is a contributor to Volatility and Cuckoo sandbox projects. He is also a frequent speaker at conferences such as PHDays, e-forensics Russia and many others. He’s passionate about all “blue team” things and spends his time researching and inventing new ways of finding bad guys and developing cool infosecurity tools.
 
 
 # Workshops
@@ -963,44 +995,32 @@ Didier Stevens (Microsoft MVP Consumer Security, SANS ISC Handler, Wireshark Cer
 You can find his open source security tools on his IT security related blog http://blog.DidierStevens.com
 
 
-## <a name="Sigma+Workshop"></a>Sigma Workshop
-by Thomas Patzke
+## <a name="Introduction+to+WHIDS+an+Open+Source+Endpoint+Detection+System+for+Windows"></a>Introduction to WHIDS an Open Source Endpoint Detection System for Windows
+by Quentin JEROME
 
-How to create Sigma rules and hunt evil in logs.
+[WHIDS](https://github.com/0xrawsec/whids) is one of the first open source endpoint detection solution for windows designed with fast Incident Response in mind. It comes with a powerful rule definition format known as [Gene](https://github.com/0xrawsec/gene) allowing one to achieve complex detection primitives. One of its strengths compared to other approaches is that it dumps artifacts (process, file, registry) based on the criticality of the events detected. This allows one to collect artifacts as close as possible of the alert generated. This approach reduces considerably the incident response process while putting the focus on artifact analysis automation. 
 
-Sigma is a generic signature format for description of interesting log events. It provides a
-structured format in which researchers and analysts can describe and share detection methods. Its
-[main repository](https://github.com/Neo23x0/sigma) contains:
+The purpose of this workshop will be twofold. In the first place I will introduce the tool and the rule definition format (30 to 45 mins). In a second part some hands-on with the attendees will be made (the rest of the time). The first part of the hands-on will cover simple WHIDS deployment and tweaking. Then comes a realistic case study. In the first place we will study a technique (or a malware) common to everyone and walk through all the steps leading to the final rule creation. Then the attendees will study on their own a technique or malware sample of their choice and build the appropriate detection rule(s). In the last part we will discuss on the possible implementations in a production environment.
 
-* a rule specification
-* an open repository for rules (currently 185)
-* a converter that generates queries for a wide range of SIEM systems
+### Tools
 
-Beside the open source repository, further services like a web editor for Sigma rules and other free
-and commercial repositories are evolving around Sigma.
+All the tools being used during the training will be open source or free tools.
+* [Sysmon from Sysinternals](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon)
+* [WHIDS](https://github.com/0xrawsec/whids)
+* [Gene](https://github.com/0xrawsec/gene)
+* [Public dataset of detection rules](https://github.com/0xrawsec/gene-rules)
 
-In this workshop, we will learn how to:
+All the necessary VMs (Linux + Windows) will be prepared in advance for the attendees to win time during the training.
 
-* Write Sigma rules for log events of analysed threats
-* Generate queries for a supported SIEM and grep command lines with the open converter *sigmac*
-* Sharing Sigma rules with MISP
-* Using generic log sources to write portable rules
-* Using content modifiers for regular expressions, expression of obfuscation techniques and other advanced stuff.
+### Targetted Audiance
 
-Further, we will explore the current and evolving ecosystem around Sigma.
-
-The following prerequisites are recommended for going through the hands-on excercises:
-
-* A Unix environment
-* Ability to run Docker containers from the Internet
-* Python >= 3.6 with dependencies from Sigma
-* The cloned Sigma workshop repository: https://github.com/thomaspatzke/sigma-workshop (pull updates short before workshop!)
-* A MISP instance that can be used for test events (I recommend MISP-dockerized from DCSO: https://github.com/DCSO/MISP-dockerized)
+* People who care about threat detection on Windows
+* Any Blue Team member
 
 
-### Bio: <a name="Thomas+Patzke"></a>Thomas Patzke
+### Bio: <a name="Quentin+JEROME"></a>Quentin JEROME
 
-Thomas Patzke has more than 13 years of experience in the area of information security, currently works as blue teamer and threat hunter at thyssenkrupp CERT and still owns no certification. He likes to [create and contribute to open source security tools](https://github.com/thomaspatzke) and is one of the creators of [Sigma](https://github.com/Neo23x0/sigma).
+Quentin has been working as incident handler since five years. He is not expert in anything, he just knows how to do several things (programming, reversing, digital forensics ...). He is interested in several topics in IT security ranging from threat detection to bug hunting but what he likes above all is to develop his own tools even though sometimes he reinvent the wheel, just because it is nice to understand how a wheel is made.
 
 
 ## <a name="Java+Web+Application+Secure+Coding+Workshop"></a>Java Web Application Secure Coding Workshop
@@ -1033,6 +1053,28 @@ Technical requirements for the workshop:
 Eva Szilagyi is managing partner and CEO of Alzette Information Security, a consulting company based in Luxembourg.  She has more than eight years of professional experience in penetration testing, security source code review, vulnerability management, digital forensics, IT auditing, telecommunication networks, and security research. 
  
 Eva has master's degrees in electrical engineering and in networks and telecommunication.  She holds several IT security certifications such as GSEC, GICSP, GMON, GSSP-JAVA, GWAPT, GMOB, CCSK, eWPT, and eJPT.  Eva speaks on a regular basis at international conferences like BruCON, Hack.lu, Nuit du Hack, Hacktivity, Black Alps, BSides Munich, BSidesBUD, Pass the SALT, Security Session and she is a member of the organizer team of BSides Luxembourg.
+
+
+## <a name="Snarf+it%21+Firmware+extraction+and+analysis+with+open+source+tools."></a>Snarf it! Firmware extraction and analysis with open source tools.
+by Pauline
+
+At the core of every IoT device is its firmware. Detailed security assessment of devices starts with obtaining a copy of the firmware. The firmware can then be statically analysed or dynamically. Several techniques exist for firmware extraction. 
+This workshop takes participants through a low level firmware extraction process which is easy to perform and doesn’t require expensive hardware.
+
+We shall present how do it using a cheap USB to serial adapter.
+The workshop will be going through the process with the following steps :
+1. Examining the hardware and find a serial port
+2. If there is not serial port available, chase the working combinaison of pins to reveal
+the serial port
+3. Setting up of your minicom working environment
+4. Extracting the firmware
+5. Analyze
+
+
+### Bio: <a name="Pauline"></a>Pauline
+
+Being a professional analyst and linguist, hardware hacking is a way to escape and
+investigate low level stuff.
 
 
 ## <a name="AppSec+101%3A+Understanding+and+exploiting+buffer+overflows"></a>AppSec 101: Understanding and exploiting buffer overflows
@@ -1152,53 +1194,6 @@ She is a part of the girls only CTF team “TeamShakti”. She is also a part of
 ### Bio: <a name="Sowmya"></a>Sowmya
 
 Sowmya is a third-year undergraduate in Computer Science and Engineering from Amrita Vishwa Vidyapeetham, Kerala. She is part of Team Bi0s(A top CTF team in India according to CTFtime) and Team Shakti(A women only CTF team) and is working in security field for the past 2 years. She is currently working on Cryptography and is an active CTF player. She has attended many conferences like BlackHat, Nullcon etc.
-
-
-## <a name="Practical+Incident+Response%2C+With+Automation+and+Collaboration+Inside"></a>Practical Incident Response, With Automation and Collaboration Inside
-by Saad Kadhi
-
-Investigating cyberattacks is now the norm, instead of the exception. The threat landscape keeps changing at a worrying pace while security analysts have to deal with growing complexity, learn new technologies and continuously adapt to rapidly evolving IT environments.
-
-To ease up their burden and enable them to give the best out of themselves in order to fulfil their important mission, while avoiding the so-called analyst fatigue, they should not be asked to master copying and pasting between different tools and interfaces to get their job done. They should not be asked to follow procedures without clearly understanding them and contributing into their improvement.
-
-Humans have brains, even if the deafening speeches about artificial intelligence and machine learning would want us to believe otherwise. It’s more than time to place humans back at the centre and offer them solutions that get out of their way yet support them in their incident response journey, to learn, adapt, and collaborate at every stage. We are social animals after all, aren’t we?
-
-This is exactly what [MISP Project](https://misp-project.org) and [TheHive Project](https://thehive-project.org) are all about, providing not only free, open source products to sustain the daily activities of blue teams around the globe, but products that actually work and integrate with one another to cover the full spectrum of incident response, ranging from detection to recovery and cyber threat intelligence production and sharing.
-
-So come join us for three hours of **practical** incident response where **automation** and **collaboration** play a paramount role, using MISP, the *de facto* standard for threat sharing, TheHive, a Security Incident Response Platform and Cortex, a powerful analysis and active response engine.
-
-This workshop will take you through a journey where we’ll cover the six steps of incident response coated with CTI-related activities to investigate a real world incident, leveraging automation and collaboration whenever applicable.
-
-After a brief introduction to MISP, TheHive and Cortex, we’ll dive in the preparation steps to not only set up correctly the tools but establish a proper team organisation, create workflows and get ready for trouble as trouble will come just afterwards, as in the movies. Indeed, now that a threat has just materialised, what are you going to do? And how you would bring out the social animal in you to collaborate with fellow defenders in the room?
-
-The clock is ticking and the fun is on!
-
-
-### Bio: <a name="Saad+Kadhi"></a>Saad Kadhi
-
-With more than 20 years of experience in operational cybersecurity, Saâd is the head of CERT-EU and the leader of TheHive Project. He devoted the last eleven years of his professional life to incident response, digital forensics and what the cool kids call now cyber threat intelligence. Before joining CERT-EU, he built a CSIRT for a large multinational company, worked at CERT Société Générale and created CERT-BDF, the cyberdefence team of Banque de France, the French national central bank. A convinced retromodernist with a knack for individualistic altruism, he gave trainings, workshops and spoke at conferences such as Hack.lu, the FIRST conference, BSides Lisbon and NorthSec. He is also one of the organisers of the Botconf conference.
-
-
-## <a name="Snarf+it%21+Firmware+extraction+and+analysis+with+open+source+tools."></a>Snarf it! Firmware extraction and analysis with open source tools.
-by Pauline
-
-At the core of every IoT device is its firmware. Detailed security assessment of devices starts with obtaining a copy of the firmware. The firmware can then be statically analysed or dynamically. Several techniques exist for firmware extraction. 
-This workshop takes participants through a low level firmware extraction process which is easy to perform and doesn’t require expensive hardware.
-
-We shall present how do it using a cheap USB to serial adapter.
-The workshop will be going through the process with the following steps :
-1. Examining the hardware and find a serial port
-2. If there is not serial port available, chase the working combinaison of pins to reveal
-the serial port
-3. Setting up of your minicom working environment
-4. Extracting the firmware
-5. Analyze
-
-
-### Bio: <a name="Pauline"></a>Pauline
-
-Being a professional analyst and linguist, hardware hacking is a way to escape and
-investigate low level stuff.
 
 
 ## <a name="Hacking+Bluetooth+Low+Energy+devices+with+Btlejack"></a>Hacking Bluetooth Low Energy devices with Btlejack
@@ -1321,30 +1316,82 @@ Previously, Patrick was working for Quoscient GmbH, P1 Security, the French Depa
 Patrick has been Speaker and Trainer at various international security conferences (FIRST, Northsec, BlackAlps, hack.lu, Toorcon, REcon Montreal/Brussels, SSTIC)
 
 
-## <a name="Introduction+to+WHIDS+an+Open+Source+Endpoint+Detection+System+for+Windows"></a>Introduction to WHIDS an Open Source Endpoint Detection System for Windows
-by Quentin JEROME
+## <a name="Sigma+Workshop"></a>Sigma Workshop
+by Thomas Patzke
 
-[WHIDS](https://github.com/0xrawsec/whids) is one of the first open source endpoint detection solution for windows designed with fast Incident Response in mind. It comes with a powerful rule definition format known as [Gene](https://github.com/0xrawsec/gene) allowing one to achieve complex detection primitives. One of its strengths compared to other approaches is that it dumps artifacts (process, file, registry) based on the criticality of the events detected. This allows one to collect artifacts as close as possible of the alert generated. This approach reduces considerably the incident response process while putting the focus on artifact analysis automation. 
+How to create Sigma rules and hunt evil in logs.
 
-The purpose of this workshop will be twofold. In the first place I will introduce the tool and the rule definition format (30 to 45 mins). In a second part some hands-on with the attendees will be made (the rest of the time). The first part of the hands-on will cover simple WHIDS deployment and tweaking. Then comes a realistic case study. In the first place we will study a technique (or a malware) common to everyone and walk through all the steps leading to the final rule creation. Then the attendees will study on their own a technique or malware sample of their choice and build the appropriate detection rule(s). In the last part we will discuss on the possible implementations in a production environment.
+Sigma is a generic signature format for description of interesting log events. It provides a
+structured format in which researchers and analysts can describe and share detection methods. Its
+[main repository](https://github.com/Neo23x0/sigma) contains:
 
-### Tools
+* a rule specification
+* an open repository for rules (currently 185)
+* a converter that generates queries for a wide range of SIEM systems
 
-All the tools being used during the training will be open source or free tools.
-* [Sysmon from Sysinternals](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon)
-* [WHIDS](https://github.com/0xrawsec/whids)
-* [Gene](https://github.com/0xrawsec/gene)
-* [Public dataset of detection rules](https://github.com/0xrawsec/gene-rules)
+Beside the open source repository, further services like a web editor for Sigma rules and other free
+and commercial repositories are evolving around Sigma.
 
-All the necessary VMs (Linux + Windows) will be prepared in advance for the attendees to win time during the training.
+In this workshop, we will learn how to:
 
-### Targetted Audiance
+* Write Sigma rules for log events of analysed threats
+* Generate queries for a supported SIEM and grep command lines with the open converter *sigmac*
+* Sharing Sigma rules with MISP
+* Using generic log sources to write portable rules
+* Using content modifiers for regular expressions, expression of obfuscation techniques and other advanced stuff.
 
-* People who care about threat detection on Windows
-* Any Blue Team member
+Further, we will explore the current and evolving ecosystem around Sigma.
+
+The following prerequisites are recommended for going through the hands-on excercises:
+
+* A Unix environment
+* Ability to run Docker containers from the Internet
+* Python >= 3.6 with dependencies from Sigma
+* The cloned Sigma workshop repository: https://github.com/thomaspatzke/sigma-workshop (pull updates short before workshop!)
+* A MISP instance that can be used for test events (I recommend MISP-dockerized from DCSO: https://github.com/DCSO/MISP-dockerized)
 
 
-### Bio: <a name="Quentin+JEROME"></a>Quentin JEROME
+### Bio: <a name="Thomas+Patzke"></a>Thomas Patzke
 
-Quentin has been working as incident handler since five years. He is not expert in anything, he just knows how to do several things (programming, reversing, digital forensics ...). He is interested in several topics in IT security ranging from threat detection to bug hunting but what he likes above all is to develop his own tools even though sometimes he reinvent the wheel, just because it is nice to understand how a wheel is made.
+Thomas Patzke has more than 13 years of experience in the area of information security, currently works as blue teamer and threat hunter at thyssenkrupp CERT and still owns no certification. He likes to [create and contribute to open source security tools](https://github.com/thomaspatzke) and is one of the creators of [Sigma](https://github.com/Neo23x0/sigma).
+
+
+## <a name="Practical+Incident+Response%2C+With+Automation+and+Collaboration+Inside"></a>Practical Incident Response, With Automation and Collaboration Inside
+by Saad Kadhi
+
+Investigating cyberattacks is now the norm, instead of the exception. The threat landscape keeps changing at a worrying pace while security analysts have to deal with growing complexity, learn new technologies and continuously adapt to rapidly evolving IT environments.
+
+To ease up their burden and enable them to give the best out of themselves in order to fulfil their important mission, while avoiding the so-called analyst fatigue, they should not be asked to master copying and pasting between different tools and interfaces to get their job done. They should not be asked to follow procedures without clearly understanding them and contributing into their improvement.
+
+Humans have brains, even if the deafening speeches about artificial intelligence and machine learning would want us to believe otherwise. It’s more than time to place humans back at the centre and offer them solutions that get out of their way yet support them in their incident response journey, to learn, adapt, and collaborate at every stage. We are social animals after all, aren’t we?
+
+This is exactly what [MISP Project](https://misp-project.org) and [TheHive Project](https://thehive-project.org) are all about, providing not only free, open source products to sustain the daily activities of blue teams around the globe, but products that actually work and integrate with one another to cover the full spectrum of incident response, ranging from detection to recovery and cyber threat intelligence production and sharing.
+
+So come join us for three hours of **practical** incident response where **automation** and **collaboration** play a paramount role, using MISP, the *de facto* standard for threat sharing, TheHive, a Security Incident Response Platform and Cortex, a powerful analysis and active response engine.
+
+This workshop will take you through a journey where we’ll cover the six steps of incident response coated with CTI-related activities to investigate a real world incident, leveraging automation and collaboration whenever applicable.
+
+After a brief introduction to MISP, TheHive and Cortex, we’ll dive in the preparation steps to not only set up correctly the tools but establish a proper team organisation, create workflows and get ready for trouble as trouble will come just afterwards, as in the movies. Indeed, now that a threat has just materialised, what are you going to do? And how you would bring out the social animal in you to collaborate with fellow defenders in the room?
+
+The clock is ticking and the fun is on!
+
+
+### Bio: <a name="Saad+Kadhi"></a>Saad Kadhi
+
+With more than 20 years of experience in operational cybersecurity, Saâd is the head of CERT-EU and the leader of TheHive Project. He devoted the last eleven years of his professional life to incident response, digital forensics and what the cool kids call now cyber threat intelligence. Before joining CERT-EU, he built a CSIRT for a large multinational company, worked at CERT Société Générale and created CERT-BDF, the cyberdefence team of Banque de France, the French national central bank. A convinced retromodernist with a knack for individualistic altruism, he gave trainings, workshops and spoke at conferences such as Hack.lu, the FIRST conference, BSides Lisbon and NorthSec. He is also one of the organisers of the Botconf conference.
+
+
+## <a name="oscd.community"></a>oscd.community
+by Daniil Yugoslavskiy
+
+https://oscd.community/
+
+
+
+
+### Bio: <a name="Daniil+Yugoslavskiy"></a>Daniil Yugoslavskiy
+
+Daniil is leading Threat Detection team at Tieto Security Operations Center (SOC) in Czech Republic, Ostrava. Before that, he was responsible for processes and systems architecture development of Informzaschita SOC in Moscow, Russia. Daniil spent more than six years in Practical Computer Security and Network Monitoring domains.
+He holds OSCP, CCNP Security, GCFA and GNFA certifications. He had talks at Code Europe, CONFidence, Amsterdam FIRST Technical Colloquium, x33fcon, EU MITRE ATT&CK community workshops, Positive Hack Days, presenting Intelligence-Driven Defence approach implementation and MITRE ATT&CK operationalization.
+Daniil is also member of GIAC Advisory Board, Krakow 2600 Meetings coordinator and creator of Atomic Threat Coverage project.
 
