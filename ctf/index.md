@@ -35,7 +35,9 @@ The CTF will take place during the hack.lu conference and will last 48h hours li
 
 # CTF Registration
 
-Registration will open on Tue, Oct. 15 (link TBA)! 
+Registration will open on Tue, Oct. 15 
+
+[Register Here](https://fluxfingersforfuture.fluxfingers.net/register)
 
 # What
 
